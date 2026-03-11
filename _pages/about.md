@@ -26,6 +26,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I’m a Robotics PhD student at Georgia Tech working on sensor fusion, state estimation, and learning-based control for highly dynamic systems. My research interests include Bayesian estimation, reinforcement learning, and multimodal sensing/inspection.
+I’m a <b>Robotics PhD candidate</b> and <b>NSF-GRFP fellow</b> at Georgia Tech working on sensor fusion, state estimation, and learning-based control for highly dynamic systems. My research interests include Bayesian estimation, reinforcement learning, and multimodal sensing/inspection.
 
 Recently, I’ve worked on nonlinear Kalman filtering and real-time state estimation, robust feed-forward control with deep RL, and automated point cloud registration pipelines (Open3D) for arbitrary LiDAR data.
