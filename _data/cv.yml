@@ -1,0 +1,123 @@
+cv:
+  name: Neel Shah
+  label: Robotics PhD Student
+  email: nshah@gatech.edu
+  location: Atlanta, GA
+  image: assets/img/meLinked.jpg
+  summary: Robotics PhD student at Georgia Tech focused on sensor fusion, state estimation, and learning-based control for highly dynamic systems.
+
+  social_networks:
+    - network: GitHub
+      username: nnelshas
+    - network: LinkedIn
+      username: neelshah8
+
+  sections:
+    Education:
+      - institution: Georgia Institute of Technology
+        location: Atlanta, GA
+        area: Robotics / Mechanical Engineering
+        studyType: PhD (Pursuing), B.S.M.E. (Completed)
+        start_date: 2020
+        end_date: 2025
+        score: "GPA: 4.0/4.0"
+        highlights:
+          - NSF GRFP Fellow
+          - Finalist, ME Outstanding Scholar Award (2022)
+
+      - institution: Drexel University
+        location: Philadelphia, PA
+        area: Mechanical Engineering
+        studyType: B.S.M.E. (Transferred)
+        start_date: 2018
+        end_date: 2020
+        score: "GPA: 3.91"
+
+      - institution: Thomas Jefferson High School for Science and Technology
+        start_date: 2014
+        end_date: 2018
+
+    Experience:
+      - company: Stebner Labs
+        position: Graduate Research Assistant
+        location: Atlanta, GA
+        start_date: 2022
+        end_date: Present
+        highlights:
+          - Designed a nonlinear Kalman filter for real-time sensor fusion and state estimation for highly dynamic systems.
+          - Deployed a deep RL agent to achieve robust feed-forward control of nonlinear high-delay system dynamics.
+          - Engineering a multimodal sensor array utilizing Bayesian inference and ML-based fusion for signal processing.
+          - Manage the Rapid Prototyping and Electronics Lab; trained 55 undergraduates and mentored 4.
+
+      - company: Los Alamos National Laboratory
+        position: Graduate Researcher
+        location: Los Alamos, NM
+        start_date: 2022
+        end_date: Present
+        highlights:
+          - Invented deformable convolution workflow for anomaly detection and wavenumber estimation in curved geometries.
+          - Performed theoretical uncertainty quantification for sensor systems to improve reliability in autonomous inspection.
+          - Engineered automated 3D point cloud registration pipelines using Open3D for arbitrary LiDAR data.
+
+      - company: VitalEyes
+        position: Co-founder
+        location: Atlanta, GA
+        start_date: 2020
+        end_date: 2021
+        highlights:
+          - Enabled research labs to dynamically adjust lab usage to proactively social distance and regulate capacity.
+          - Led customer discovery by interviewing industry experts and building relationships within academia.
+          - Managed tech stack and unit tests; launched within 5 labs with 30+ researchers.
+
+    Volunteer:
+      - company: Community STEM Outreach and Education
+        position: Volunteer
+        location: Atlanta, GA
+        start_date: 2024
+        end_date: Present
+        highlights:
+          - Collaborating with Atlanta Mission Women’s Shelter to develop STEM enrichment courses for unhoused children.
+          - Partnered with Agape community outreach to develop math skills in underserved K-12 students.
+
+    Awards:
+      - title: NSF Graduate Research Fellowship Program (GRFP)
+        date: 2022
+        awarder: National Science Foundation
+
+      - title: Finalist, ME Outstanding Scholar Award
+        date: 2022
+        awarder: Georgia Tech Mechanical Engineering
+
+    Publications:
+      - title: General Curved Surface Full-field Thickness Estimation utilizing Deformable Kernels for Wavenumber Filtering
+        authors:
+          - Neel Shah
+        publisher: "Journal manuscript in progress (targeting Mechanical Systems and Signal Processing)"
+        releaseDate: 2026
+        summary: Journal manuscript and patent in progress.
+
+      - title: Uncertainty Quantification of Thickness Estimation via Full-field Ultrasonic Inspection
+        authors:
+          - Neel Shah
+        publisher: "IWSHM 2023; AIVELA 2025"
+        releaseDate: 2023
+        summary: Published and presented work on uncertainty quantification for full-field ultrasonic thickness estimation.
+
+    Skills:
+      - name: Robotics & ML
+        keywords: "Sensor Fusion (Kalman, Bayesian), State Estimation, VLM/VLA Foundation Models, Reinforcement Learning"
+
+      - name: Programming
+        keywords: "Python (PyTorch, OpenCV), C++, MATLAB/Simulink, ROS2, SLURM, LabVIEW"
+
+      - name: Hardware
+        keywords: "System Integration, Real-time Controls, High-speed Data Acquisition, Mechatronics"
+
+    Projects:
+      - name: Vision-Language Foundation Models (CS 8803 Final Project)
+        summary: Out-of-distribution uncertainty quantification and inference optimization for OpenVLA.
+        highlights:
+          - Implemented Bayesian LoRA and Laplace approximation for OpenVLA out-of-distribution uncertainty quantification.
+          - Optimized inference to 99.2% success on LIBERO via confidence-based dynamic allocation of open-loop actions.
+        start_date: 2025
+        end_date: 2025

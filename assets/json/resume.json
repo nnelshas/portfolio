@@ -1,0 +1,188 @@
+{
+  "basics": {
+    "name": "Neel Shah",
+    "label": "Robotics PhD Student",
+    "image": "assets/img/meLinked.jpg",
+    "email": "nshah@gatech.edu",
+    "summary": "Robotics PhD student at Georgia Tech focused on sensor fusion, state estimation, and learning-based control for highly dynamic systems.",
+    "location": {
+      "city": "Atlanta",
+      "region": "GA",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "nnelshas",
+        "url": "https://github.com/nnelshas"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "neelshah8",
+        "url": "https://www.linkedin.com/in/neelshah8/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Stebner Labs",
+      "position": "Graduate Research Assistant",
+      "location": "Atlanta, GA",
+      "startDate": "2022-01-01",
+      "endDate": "",
+      "summary": "Research in real-time sensing, estimation, and control for highly dynamic systems.",
+      "highlights": [
+        "Designed a nonlinear Kalman filter for real-time sensor fusion and state estimation.",
+        "Deployed a deep RL agent for robust feed-forward control of nonlinear high-delay dynamics.",
+        "Engineering a multimodal sensor array using Bayesian inference and ML-based fusion for signal processing.",
+        "Managed the Rapid Prototyping and Electronics Lab; trained 55 undergraduates and mentored 4."
+      ]
+    },
+    {
+      "name": "Los Alamos National Laboratory",
+      "position": "Graduate Researcher",
+      "location": "Los Alamos, NM",
+      "startDate": "2022-05-01",
+      "endDate": "",
+      "summary": "Research in autonomous inspection, uncertainty quantification, and 3D perception pipelines.",
+      "highlights": [
+        "Invented a deformable convolution workflow for anomaly detection and wavenumber estimation in curved geometries.",
+        "Performed theoretical uncertainty quantification for sensor systems to improve reliability in autonomous inspection.",
+        "Engineered automated 3D point cloud registration pipelines using Open3D for arbitrary LiDAR data."
+      ]
+    },
+    {
+      "name": "VitalEyes",
+      "position": "Co-founder",
+      "location": "Atlanta, GA",
+      "startDate": "2020-05-01",
+      "endDate": "2021-04-01",
+      "summary": "Built software to help research labs proactively manage capacity and social distancing.",
+      "highlights": [
+        "Led customer discovery by interviewing industry experts and building relationships in academia.",
+        "Managed the tech stack, unit tests, and release workflows; launched across 5 labs with 30+ researchers."
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Community STEM Outreach and Education",
+      "location": "Atlanta, GA",
+      "position": "Volunteer",
+      "startDate": "2024-09-01",
+      "endDate": "",
+      "summary": "Developing STEM enrichment content for underserved communities.",
+      "highlights": [
+        "Collaborating with Atlanta Mission Women’s Shelter to develop STEM enrichment courses for unhoused children.",
+        "Partnered with Agape community outreach to develop math skills in underserved K-12 students."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Georgia Institute of Technology",
+      "location": "Atlanta, GA",
+      "area": "Robotics / Mechanical Engineering",
+      "studyType": "PhD (Pursuing), B.S.M.E. (Completed)",
+      "startDate": "2020-08-01",
+      "endDate": "2025-05-01",
+      "score": "GPA: 4.0/4.0",
+      "courses": [],
+      "highlights": ["NSF GRFP Fellow", "Finalist, ME Outstanding Scholar Award (2022)"]
+    },
+    {
+      "institution": "Drexel University",
+      "location": "Philadelphia, PA",
+      "area": "Mechanical Engineering",
+      "studyType": "B.S.M.E. (Transferred)",
+      "startDate": "2018-09-01",
+      "endDate": "2020-08-01",
+      "score": "GPA: 3.91",
+      "courses": [],
+      "highlights": []
+    },
+    {
+      "institution": "Thomas Jefferson High School for Science and Technology",
+      "location": "",
+      "area": "",
+      "studyType": "",
+      "startDate": "2014-09-01",
+      "endDate": "2018-08-01",
+      "score": "",
+      "courses": [],
+      "highlights": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "NSF Graduate Research Fellowship Program (GRFP)",
+      "date": "2022-01-01",
+      "awarder": "National Science Foundation",
+      "summary": "Graduate research fellowship supporting doctoral studies in robotics."
+    },
+    {
+      "title": "Finalist, ME Outstanding Scholar Award",
+      "date": "2022-01-01",
+      "awarder": "Georgia Tech Mechanical Engineering",
+      "summary": ""
+    }
+  ],
+  "certificates": [],
+  "publications": [
+    {
+      "name": "General Curved Surface Full-field Thickness Estimation utilizing Deformable Kernels for Wavenumber Filtering",
+      "publisher": "Journal manuscript in progress (targeting Mechanical Systems and Signal Processing)",
+      "releaseDate": "2026-01-01",
+      "url": "",
+      "summary": "Journal manuscript and patent in progress."
+    },
+    {
+      "name": "Uncertainty Quantification of Thickness Estimation via Full-field Ultrasonic Inspection",
+      "publisher": "International Workshop for Structural Health Monitoring (IWSHM) 2023; AIVELA 2025",
+      "releaseDate": "2023-01-01",
+      "url": "",
+      "summary": "Published and presented work on uncertainty quantification for full-field ultrasonic thickness estimation."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Robotics & ML",
+      "level": "",
+      "icon": "fa-solid fa-robot",
+      "keywords": [
+        "Sensor Fusion (Kalman, Bayesian)",
+        "State Estimation",
+        "VLM/VLA Foundation Models",
+        "Reinforcement Learning"
+      ]
+    },
+    {
+      "name": "Programming",
+      "level": "",
+      "icon": "fa-solid fa-code",
+      "keywords": ["Python (PyTorch, OpenCV)", "C++", "MATLAB/Simulink", "ROS2", "SLURM", "LabVIEW"]
+    },
+    {
+      "name": "Hardware",
+      "level": "",
+      "icon": "fa-solid fa-microchip",
+      "keywords": ["System Integration", "Real-time Controls", "High-speed Data Acquisition", "Mechatronics"]
+      ]
+    }
+  ],
+  "languages": [],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
+      "name": "Vision-Language Foundation Models (CS 8803 Final Project)",
+      "summary": "Out-of-distribution uncertainty quantification and inference optimization for OpenVLA.",
+      "highlights": [
+        "Implemented Bayesian LoRA and Laplace approximation for OpenVLA OOD uncertainty quantification.",
+        "Optimized inference to 99.2% success on LIBERO via confidence-based dynamic allocation of open-loop actions."
+      ],
+      "startDate": "2025-08-01",
+      "endDate": "2025-12-01"
+    }
+  ]
+}
