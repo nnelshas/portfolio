@@ -405,7 +405,20 @@ Run the test yourself: [Google Lighthouse PageSpeed Insights](https://pagespeed.
 
 <!--ts-->
 
-- [al-folio](#al-folio)
+- [Neel Shah — Personal Portfolio Website](#neel-shah--personal-portfolio-website)
+  - [Quick Start](#quick-start)
+  - [How to Edit Common Things](#how-to-edit-common-things)
+    - [Update Your Bio](#update-your-bio)
+    - [Update Your Resume PDF](#update-your-resume-pdf)
+    - [Update Work Experience / CV Data](#update-work-experience--cv-data)
+    - [Add a New Project Card](#add-a-new-project-card)
+    - [Add Publications (BibTeX)](#add-publications-bibtex)
+    - [Change Nav Order](#change-nav-order)
+    - [Add Hover Videos](#add-hover-videos)
+  - [Site Structure](#site-structure)
+  - [Key Technical Notes](#key-technical-notes)
+  - [Deployment](#deployment)
+- [al-folio (original theme docs below)](#al-folio-original-theme-docs-below)
   - [User community](#user-community)
   - [Lighthouse PageSpeed Insights](#lighthouse-pagespeed-insights)
     - [Desktop](#desktop)
