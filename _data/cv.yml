@@ -1,10 +1,17 @@
 cv:
   name: Neel Shah
-  label: Robotics PhD Student
+  label: Robotics PhD Candidate | Sensor Fusion · Adaptive Control · Learning-Based Systems
   email: nshah@gatech.edu
+  phone: 703-896-6210
   location: Atlanta, GA
   image: assets/img/meLinked.jpg
-  summary: Robotics PhD student at Georgia Tech focused on sensor fusion, state estimation, and learning-based control for highly dynamic systems.
+  summary: >
+    NSF GRFP Fellow and Robotics PhD candidate at Georgia Tech (expected May 2027) specializing in
+    multi-physics sensor fusion, adaptive control (MRAC + Lyapunov), and learning-based systems for
+    highly dynamic, real-world applications. Research spans the full autonomy stack — from system
+    identification and provably-stable adaptive control to VLA foundation models — with a consistent
+    focus on hardware-validated results. Actively seeking robotics engineering roles in perception,
+    state estimation, and intelligent control.
 
   social_networks:
     - network: GitHub
@@ -17,13 +24,14 @@ cv:
       - institution: Georgia Institute of Technology
         location: Atlanta, GA
         area: Robotics / Mechanical Engineering
-        studyType: PhD (Pursuing), B.S.M.E. (Completed)
+        studyType: "PhD (Candidate) · M.S.M.E. (Completed) · B.S.M.E. (Completed)"
         start_date: 2020
-        end_date: 2025
-        score: "GPA: 4.0/4.0"
+        end_date: "2027 (expected)"
+        score: "GPA: 4.0 / 4.0"
         highlights:
-          - NSF GRFP Fellow
-          - Finalist, ME Outstanding Scholar Award (2022)
+          - "**NSF Graduate Research Fellowship Program (GRFP) Fellow** — one of ~2,000 awarded nationally per year"
+          - "Finalist, ME Outstanding Scholar Award (2022)"
+          - "Relevant coursework: Robot Intelligence, Vision-Language Models, Nonlinear Control, Probability & Statistics, Advanced Dynamics"
 
       - institution: Drexel University
         location: Philadelphia, PA
@@ -34,90 +42,138 @@ cv:
         score: "GPA: 3.91"
 
       - institution: Thomas Jefferson High School for Science and Technology
+        location: Alexandria, VA
+        studyType: High School Diploma
         start_date: 2014
         end_date: 2018
 
     Experience:
-      - company: Stebner Labs
+      - company: Stebner Lab, Georgia Institute of Technology
         position: Graduate Research Assistant
         location: Atlanta, GA
         start_date: 2022
         end_date: Present
         highlights:
-          - Designed a nonlinear Kalman filter for real-time sensor fusion and state estimation for highly dynamic systems.
-          - Deployed a deep RL agent to achieve robust feed-forward control of nonlinear high-delay system dynamics.
-          - Engineering a multimodal sensor array utilizing Bayesian inference and ML-based fusion for signal processing.
-          - Manage the Rapid Prototyping and Electronics Lab; trained 55 undergraduates and mentored 4.
+          - "**PhD Thesis**: *Multi-material Mass Flow Monitoring and Control for Powder-Blown Directed Energy Deposition* — developing real-time sensing and control systems for advanced metal additive manufacturing."
+          - "Designed and deployed a **nonlinear Kalman filter** for real-time multi-physics sensor fusion and state estimation on a high-speed physical testbed — sub-millisecond cycle times, robust to sensor dropout."
+          - "Developed **MRAC with Lyapunov-stable parameter adaptation** for feedforward control of a nonlinear powder transport system with 10–60s delays; derived adaptation laws from Lyapunov stability theory; achieved **70% fluctuation mitigation** in preliminary implementation."
+          - "Engineered a **multi-physics sensor array** (piezoelectric, triboelectric, optical attenuation, optical reflection) for real-time in-line powder mass flow monitoring — 4 novel sensor modalities validated, 3 patents pending."
+          - "Deployed a **Deep RL (PPO) agent** to achieve robust feed-forward control of a nonlinear high-delay system; achieved 3× reduction in tracking error vs. classical baselines with zero-shot sim-to-real transfer."
+          - "Manage the Rapid Prototyping and Electronics Lab; **trained 55 undergraduates** in manufacturing, mentored 4 graduate researchers."
 
-      - company: Los Alamos National Laboratory
-        position: Graduate Researcher
+      - company: Los Alamos National Laboratory (LANL)
+        position: Graduate Research Scientist
         location: Los Alamos, NM
         start_date: 2022
         end_date: Present
         highlights:
-          - Invented deformable convolution workflow for anomaly detection and wavenumber estimation in curved geometries.
-          - Performed theoretical uncertainty quantification for sensor systems to improve reliability in autonomous inspection.
-          - Engineered automated 3D point cloud registration pipelines using Open3D for arbitrary LiDAR data.
+          - "**Invented** deformable convolution workflow for wavenumber estimation and anomaly detection on arbitrary curved 3D geometries — patent pending (LANL)."
+          - "Developed rigorous **theoretical UQ framework** for full-field ultrasonic inspection pipelines; work published at *IWSHM 2023* and presented at *AIVELA 2025*."
+          - "Engineered fully **automated 3D point cloud registration pipeline** (FPFH + RANSAC + ICP + pose graph optimization) using Open3D for multi-scan LiDAR data at scale."
 
       - company: VitalEyes
-        position: Co-founder
+        position: Co-Founder & CTO
         location: Atlanta, GA
         start_date: 2020
         end_date: 2021
         highlights:
-          - Enabled research labs to dynamically adjust lab usage to proactively social distance and regulate capacity.
-          - Led customer discovery by interviewing industry experts and building relationships within academia.
-          - Managed tech stack and unit tests; launched within 5 labs with 30+ researchers.
+          - "Co-founded computer-vision startup enabling real-time occupancy monitoring for research facilities."
+          - "Led full-stack development; **deployed to 5 GT labs with 30+ researchers** within 3 months of launch."
+          - "Conducted customer discovery across academia and industry to drive product iteration."
 
     Volunteer:
-      - company: Community STEM Outreach and Education
-        position: Volunteer
+      - company: Community STEM Outreach & Education
+        position: Volunteer Educator
         location: Atlanta, GA
         start_date: 2024
         end_date: Present
         highlights:
-          - Collaborating with Atlanta Mission Women’s Shelter to develop STEM enrichment courses for unhoused children.
-          - Partnered with Agape community outreach to develop math skills in underserved K-12 students.
+          - "Developing STEM enrichment curriculum for the **Atlanta Mission Women's Shelter** (unhoused children)."
+          - "Building math skills with underserved K-12 students via **Agape Community Outreach**."
 
     Awards:
       - title: NSF Graduate Research Fellowship Program (GRFP)
         date: 2022
         awarder: National Science Foundation
+        summary: "Highly competitive national fellowship (~2,000 awarded/year). Provides 3 years of stipend and tuition support."
 
       - title: Finalist, ME Outstanding Scholar Award
         date: 2022
-        awarder: Georgia Tech Mechanical Engineering
+        awarder: Georgia Tech School of Mechanical Engineering
 
     Publications:
-      - title: General Curved Surface Full-field Thickness Estimation utilizing Deformable Kernels for Wavenumber Filtering
+      - title: "Real-time powder flow monitoring for directed energy deposition using multi-physics sensing"
         authors:
           - Neel Shah
-        publisher: "Journal manuscript in progress (targeting Mechanical Systems and Signal Processing)"
+          - Z. Brunson
+          - A. Panchal
+          - J. Kim
+          - A. Stebner
+        publisher: "Additive Manufacturing (manuscript in preparation, targeting April 2026)"
         releaseDate: 2026
-        summary: Journal manuscript and patent in progress.
+        summary: "Novel multi-physics sensor array (piezoelectric, triboelectric, optical) for in-line PB-DED mass flow monitoring. 3 patents pending."
 
-      - title: Uncertainty Quantification of Thickness Estimation via Full-field Ultrasonic Inspection
+      - title: "Real-time adaptive feedforward powder flow control for directed energy deposition"
         authors:
           - Neel Shah
-        publisher: "IWSHM 2023; AIVELA 2025"
+          - Z. Brunson
+          - A. Stebner
+        publisher: "Additive Manufacturing (manuscript in preparation, targeting November 2026)"
+        releaseDate: 2026
+        summary: "MRAC with Lyapunov-stable parameter adaptation for feedforward control of powder transport with large delays."
+
+      - title: "General Curved Surface Full-field Thickness Estimation utilizing Deformable Kernels for Wavenumber Filtering"
+        authors:
+          - Neel Shah
+          - et al.
+        publisher: "Mechanical Systems and Signal Processing (manuscript in preparation, targeting April 2026); patent pending (LANL)"
+        releaseDate: 2026
+        summary: "Novel deformable convolution framework for full-field wavenumber filtering on arbitrary curved geometries."
+
+      - title: "Uncertainty Quantification of Thickness Estimation via Full-field Ultrasonic Inspection"
+        authors:
+          - Neel Shah
+          - E. Jacobson
+          - E. Flynn
+          - A. Wachtor
+        publisher: "International Workshop for Structural Health Monitoring (IWSHM 2023); also presented at AIVELA 2025"
         releaseDate: 2023
-        summary: Published and presented work on uncertainty quantification for full-field ultrasonic thickness estimation.
+        summary: "Rigorous theoretical UQ framework for full-field ultrasonic thickness estimation pipelines."
 
     Skills:
-      - name: Robotics & ML
-        keywords: "Sensor Fusion (Kalman, Bayesian), State Estimation, VLM/VLA Foundation Models, Reinforcement Learning"
+      - name: Adaptive Control & Estimation
+        keywords: "MRAC, Lyapunov Stability Analysis, System Identification, Kalman Filtering (EKF/UKF), Sensor Fusion, Bayesian Inference, Uncertainty Quantification"
+
+      - name: Machine Learning & Robotics
+        keywords: "PyTorch, Deep RL (PPO/SAC), Vision-Language Action Models (OpenVLA/VLA), LoRA/PEFT, Sim-to-Real Transfer, PLSR, ROS2"
 
       - name: Programming
-        keywords: "Python (PyTorch, OpenCV), C++, MATLAB/Simulink, ROS2, SLURM, LabVIEW"
+        keywords: "Python, C++, MATLAB/Simulink, SLURM (HPC), LabVIEW (FPGA), Git"
 
-      - name: Hardware
-        keywords: "System Integration, Real-time Controls, High-speed Data Acquisition, Mechatronics"
+      - name: Hardware & Systems
+        keywords: "System Integration, Real-Time Embedded Control (FPGA), High-Speed DAQ (>1 kHz), Mechatronics, Fiber-Optic Sensing, Rapid Prototyping"
 
     Projects:
-      - name: Vision-Language Foundation Models (CS 8803 Final Project)
-        summary: Out-of-distribution uncertainty quantification and inference optimization for OpenVLA.
+      - name: "Adaptive Mass Flow Control — MRAC + Lyapunov"
+        summary: "Feedforward MRAC with Lyapunov-derived adaptation for PB-DED powder control. 70% fluctuation mitigation."
         highlights:
-          - Implemented Bayesian LoRA and Laplace approximation for OpenVLA out-of-distribution uncertainty quantification.
-          - Optimized inference to 99.2% success on LIBERO via confidence-based dynamic allocation of open-loop actions.
+          - "Lyapunov-derived parameter adaptation law guarantees stable convergence under 10–60s transport delays."
+          - "System identification of rotary-driven powder dynamics; analytical control law inversion."
+        start_date: 2023
+        end_date: Present
+
+      - name: "Multi-Physics Sensor Array for PB-DED"
+        summary: "4 novel in-line sensors (piezo, triboelectric, optical, ultrasonic) for real-time mass flow monitoring."
+        highlights:
+          - "Validated 4 orthogonal modalities against precision mass scale; 3 patents pending."
+          - "Savitzky-Golay + Bayesian fusion pipeline; >3 dB oscillation SNR detection."
+        start_date: 2022
+        end_date: Present
+
+      - name: "Vision-Language Action Models — CS 8803"
+        summary: "Bayesian UQ + inference optimization for OpenVLA-OFT on LIBERO benchmark."
+        highlights:
+          - "Bayesian LoRA + Laplace approximation for OOD uncertainty estimation."
+          - "99.2% success rate via confidence-based dynamic open-loop action allocation (~2× speedup)."
         start_date: 2025
         end_date: 2025

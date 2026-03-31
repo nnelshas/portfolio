@@ -183,6 +183,70 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Project hover video
+
+.project-media-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+
+  .project-thumbnail {
+    display: block;
+    width: 100%;
+    transition: opacity 300ms ease, transform 300ms ease;
+  }
+
+  .project-hover-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    pointer-events: none;
+  }
+
+  .project-video-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 12px;
+    letter-spacing: 0.03em;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    pointer-events: none;
+
+    i {
+      font-size: 0.6rem;
+      margin-right: 3px;
+    }
+  }
+}
+
+.project-card:hover {
+  .project-media-wrapper {
+    .project-thumbnail {
+      opacity: 0;
+      transform: scale(1.03);
+    }
+
+    .project-hover-video {
+      opacity: 1;
+    }
+
+    .project-video-badge {
+      opacity: 1;
+    }
+  }
+}
+
 // Repositories
 
 @media (min-width: 768px) {

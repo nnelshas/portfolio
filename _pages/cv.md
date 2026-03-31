@@ -1,12 +1,14 @@
 ---
 layout: cv
-permalink: /cv/
-title: CV
+permalink: /resume/
+title: Resume
 nav: true
 nav_order: 5
-cv_pdf: /assets/pdf/resume.pdf # you can also use external links here
-cv_format: jsonresume # options: rendercv, jsonresume
-description: Download my CV as a PDF or view it below.
+cv_pdf: /assets/pdf/resume.pdf
+cv_format: rendercv
+description: >
+  Download my resume as a PDF or view it below.
+  Targeting robotics engineering roles in perception, state estimation, and learning-based control.
 toc:
   sidebar: left
 ---

@@ -182,6 +182,67 @@
   }
 }
 
+// Publication preview hover video
+
+.pub-preview-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+
+  .pub-preview-img {
+    display: block;
+    width: 100%;
+    transition: opacity 300ms ease;
+  }
+
+  .pub-preview-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    border-radius: 4px;
+    pointer-events: none;
+  }
+
+  .pub-video-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.6rem;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    .pub-preview-img {
+      opacity: 0;
+    }
+
+    .pub-preview-video {
+      opacity: 1;
+    }
+
+    .pub-video-badge {
+      opacity: 1;
+    }
+  }
+}
+
 .citation,
 .citation-number {
   color: var(--global-theme-color);

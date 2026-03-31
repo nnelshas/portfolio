@@ -1,4 +1,161 @@
-# al-folio
+# Neel Shah — Personal Portfolio Website
+
+> **Live site**: [nnelshas.github.io/portfolio](https://nnelshas.github.io/portfolio)
+> **Stack**: Jekyll + [al-folio theme](https://github.com/alshedivat/al-folio) · Deployed via GitHub Pages
+
+---
+
+## Quick Start
+
+```bash
+bundle install                     # install gems (one-time)
+bundle exec jekyll serve           # dev server → http://localhost:4000/portfolio
+bundle exec jekyll build           # build to _site/ (don't edit _site/ directly)
+```
+
+Docker alternative (recommended):
+```bash
+docker compose up                  # runs at http://localhost:8080
+```
+
+---
+
+## How to Edit Common Things
+
+### Update Your Bio
+Edit `_pages/about.md`. YAML front matter controls the sidebar; the body below `---` is Markdown.
+
+### Update Your Resume PDF
+Replace `assets/pdf/resume.pdf`. The `/resume/` page auto-links to it.
+
+### Update Work Experience / CV Data
+**All structured CV data lives in `_data/cv.yml`** — this is the single source of truth for the /resume/ page.
+
+```yaml
+Experience:
+  - company: Your Company
+    position: Your Role
+    start_date: 2024
+    end_date: Present
+    highlights:
+      - "Bullet with **bold** and [links](https://example.com)"
+```
+
+### Add a New Project Card
+Create `_projects/your_project.md`:
+```markdown
+---
+layout: page
+title: Project Title
+description: One-line card description.
+img: assets/img/thumbnail.jpg   # 800×600px recommended
+hover_video: assets/video/demo.mp4  # optional — plays on hover
+importance: 3                   # lower = shown first
+category: research              # or "service"
+---
+Content in Markdown here...
+```
+
+### Add Publications (BibTeX)
+Edit `_bibliography/papers.bib`. Key custom fields:
+```bibtex
+preview      = {thumbnail.jpg}           % in assets/img/publication_preview/
+preview_video = {assets/video/demo.mp4}  % plays on preview hover
+bibtex_show  = {true}
+selected     = {true}                    % appears on about page
+```
+
+### Change Nav Order
+Edit `nav_order:` in each `_pages/*.md` file. Current order:
+
+| Order | Page | File |
+|-------|------|------|
+| 2 | publications | publications.md |
+| 3 | projects | projects.md |
+| 4 | experience | experience.md |
+| 5 | resume | cv.md |
+| 6 | repositories | repositories.md |
+
+### Add Hover Videos
+1. Copy `.mp4` to `assets/video/`
+2. Add `hover_video: assets/video/filename.mp4` to project frontmatter
+3. For publications: add `preview_video = {assets/video/filename.mp4}` to BibTeX entry
+4. JS in `assets/js/project-hover-video.js` handles play/pause automatically
+
+---
+
+## Site Structure
+
+```
+portfolio/
+├── _config.yml                  ← Global settings (name, URL, features)
+├── _data/
+│   ├── cv.yml                   ← ALL resume data (EDIT THIS for CV changes)
+│   └── repositories.yml         ← GitHub repos shown on /repositories/
+├── _pages/
+│   ├── about.md                 ← Home page
+│   ├── projects.md              ← Projects listing
+│   ├── publications.md          ← Publications listing
+│   ├── experience.md            ← Work history page (CUSTOM)
+│   ├── cv.md                    ← Resume page (links to PDF)
+│   └── repositories.md          ← GitHub repos page
+├── _projects/                   ← One .md per project card
+│   ├── vision_language_foundation_models.md  (importance: 1)
+│   ├── ded_mass_flow_control.md              (importance: 2) ← PhD thesis
+│   ├── multiphysics_sensor_array.md          (importance: 3)
+│   ├── spectral_multimaterial_sensing.md     (importance: 4)
+│   ├── deformable_convolution_nde.md         (importance: 5)
+│   ├── ultrasonic_inspection_uq.md           (importance: 6)
+│   ├── lidar_point_cloud_registration.md     (importance: 7)
+│   └── community_stem_outreach.md            (service category)
+├── _bibliography/
+│   └── papers.bib               ← BibTeX publications
+├── assets/
+│   ├── img/                     ← Images (profile, project thumbnails)
+│   │   └── publication_preview/ ← Publication preview thumbnails
+│   ├── pdf/
+│   │   └── resume.pdf           ← Resume PDF (replace to update)
+│   ├── video/                   ← Videos for hover previews
+│   │   ├── vla_success.mp4      ← VLA project success demo
+│   │   └── vla_failure.mp4      ← VLA project failure demo
+│   └── js/
+│       └── project-hover-video.js  ← Hover video JS (projects + pubs)
+└── _sass/
+    ├── _components.scss         ← Project card hover video CSS
+    └── _publications.scss       ← Publication hover video CSS
+```
+
+---
+
+## Key Technical Notes
+
+- **Math** (MathJax): Use `$$...$$` for display math, `$...$` for inline. Works site-wide (`enable_math: true`).
+- **Dark mode**: Toggle top-right. Custom CSS uses `var(--global-theme-color)` — auto respects both modes.
+- **Hover videos**: MP4 only. Keep ≤ 5MB. `preload="none"` means no bandwidth cost until hover.
+- **Author highlighting in pubs**: Controlled by `scholar.last_name` / `scholar.first_name` in `_config.yml`.
+- **Categories**: Projects split into `research` and `service`. Add new categories in `_pages/projects.md` `display_categories:`.
+
+---
+
+## Deployment
+
+Auto-deploys on push to `main` via GitHub Actions (~2–3 min):
+
+```bash
+git add -A
+git commit -m "Update: description of changes"
+git push origin main
+```
+
+Status: https://github.com/nnelshas/portfolio/actions
+
+---
+
+*Built on [al-folio](https://github.com/alshedivat/al-folio). Last major overhaul: March 2026.*
+
+---
+
+# al-folio (original theme docs below)
 
 <div align="center">
 

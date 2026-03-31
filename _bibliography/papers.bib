@@ -1,20 +1,47 @@
 ---
 ---
 
+@unpublished{shah2026multiphysics_sensors,
+  title        = {Real-time powder flow monitoring for directed energy deposition using multi-physics sensing},
+  author       = {Shah, Neel and Brunson, Z. and Panchal, A. and Kim, J. and Stebner, A.},
+  note         = {Manuscript in preparation, targeting Additive Manufacturing, April 2026. 3 patents pending (Georgia Tech).},
+  year         = {2026},
+  abstract     = {We present a multi-physics sensor array comprising four orthogonal in-line sensing modalities — low-frequency piezoelectric, triboelectric, optical attenuation, and optical reflection — for real-time mass flow monitoring in powder-blown directed energy deposition (PB-DED). Each modality captures distinct physical properties of the powder stream. A Bayesian sensor fusion pipeline combining Savitzky-Golay filtering, least-squares oscillation fitting, and SNR quantification provides robust average flow rate estimates and high-fidelity detection of RPM-tied periodic instabilities. Validated against precision mass scale ground truth across 2–7 RPM.},
+  preview      = {curved_surface.jpg},
+  bibtex_show  = {true},
+  selected     = {true}
+}
+
+@unpublished{shah2026mrac_flow_control,
+  title        = {Real-time adaptive feedforward powder flow control for directed energy deposition},
+  author       = {Shah, Neel and Brunson, Z. and Stebner, A.},
+  note         = {Manuscript in preparation, targeting Additive Manufacturing, November 2026. Patent in preparation (Georgia Tech).},
+  year         = {2026},
+  abstract     = {We develop a feedforward mass flow controller for powder-blown DED combining physics-based system identification, analytical control law inversion, and Model Reference Adaptive Control (MRAC) with Lyapunov-stable parameter adaptation. The system identification characterizes rotary-driven powder transport dynamics as a function of motor RPM, identifying oscillation frequency and amplitude parameters via least-squares regression. A feedforward control law is derived by analytical inversion of the identified model. MRAC with Lyapunov-derived adaptation laws updates model parameters in real-time using delayed process sensor feedback, handling transport delays of 10–60 seconds. Preliminary implementation demonstrates 70% mass flow fluctuation mitigation.},
+  preview      = {ultrasonic_inspection.jpg},
+  bibtex_show  = {true},
+  selected     = {true}
+}
+
 @unpublished{shah2026curved_surface_thickness,
-  title       = {General Curved Surface Full-field Thickness Estimation utilizing Deformable Kernels for Wavenumber Filtering},
-  author      = {Shah, Neel and others},
-  note        = {Journal manuscript in progress; patent in progress. Targeting Mechanical Systems and Signal Processing.},
-  year        = {2026},
-  bibtex_show = {true},
-  selected    = {true}
+  title        = {General Curved Surface Full-field Thickness Estimation utilizing Deformable Kernels for Wavenumber Filtering},
+  author       = {Shah, Neel and others},
+  note         = {Manuscript in preparation, targeting Mechanical Systems and Signal Processing, April 2026. Patent pending (Los Alamos National Laboratory).},
+  year         = {2026},
+  abstract     = {We introduce a deformable convolution framework for wavenumber-domain filtering on arbitrary curved surfaces, enabling accurate full-field ultrasonic thickness estimation without the flat-geometry assumptions of standard methods. Kernel offsets are derived from surface principal curvatures obtained via 3D point cloud analysis, allowing the filter bank to adapt to local propagation geometry. This eliminates systematic bias artifacts and significantly improves anomaly localization accuracy on curved structural components.},
+  preview      = {curved_surface.jpg},
+  bibtex_show  = {true},
+  selected     = {true}
 }
 
 @inproceedings{shah2023uq_ultrasonic_thickness,
-  title       = {Uncertainty Quantification of Thickness Estimation via Full-field Ultrasonic Inspection},
-  author      = {Shah, Neel and Jacobson, E. and Flynn, E. and Wachtor, A.},
-  booktitle   = {International Workshop for Structural Health Monitoring (IWSHM)},
-  year        = {2023},
-  note        = {Also presented at AIVELA 2025},
-  bibtex_show = {true}
+  title        = {Uncertainty Quantification of Thickness Estimation via Full-field Ultrasonic Inspection},
+  author       = {Shah, Neel and Jacobson, E. and Flynn, E. and Wachtor, A.},
+  booktitle    = {International Workshop for Structural Health Monitoring (IWSHM)},
+  year         = {2023},
+  note         = {Also presented at AIVELA 2025},
+  abstract     = {We develop a rigorous theoretical uncertainty quantification (UQ) framework for full-field ultrasonic thickness estimation pipelines. By propagating measurement noise through each processing stage — from raw waveform acquisition through wavenumber filtering to final thickness reconstruction — we derive calibrated confidence intervals. Dominant error sources are identified, the amplification of uncertainty at high-curvature regions is characterized analytically, and probabilistic anomaly detection thresholds with well-calibrated false-alarm rates are provided.},
+  preview      = {ultrasonic_inspection.jpg},
+  bibtex_show  = {true},
+  selected     = {true}
 }

@@ -2,30 +2,79 @@
 layout: about
 title: about
 permalink: /
-subtitle: Robotics PhD student at Georgia Tech
+subtitle: >
+  Robotics PhD Candidate · Georgia Tech &nbsp;|&nbsp;
+  <a href="mailto:nshah@gatech.edu">nshah@gatech.edu</a> &nbsp;|&nbsp;
+  NSF GRFP Fellow
 
 profile:
   align: right
   image: meLinked.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
-    <p>Atlanta, GA</p>
-    <p><a href="mailto:nshah@gatech.edu">nshah@gatech.edu</a></p>
+    <p><i class="fa-solid fa-location-dot"></i> Atlanta, GA</p>
+    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:nshah@gatech.edu">nshah@gatech.edu</a></p>
+    <p><i class="fa-brands fa-github"></i> <a href="https://github.com/nnelshas" target="_blank">nnelshas</a></p>
+    <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/neelshah8" target="_blank">neelshah8</a></p>
+    <p><i class="fa-solid fa-file-pdf"></i> <a href="/portfolio/assets/pdf/resume.pdf" target="_blank">Resume (PDF)</a></p>
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: true
+social: true
 
 announcements:
-  enabled: false # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
 
 latest_posts:
   enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
 ---
 
-I’m a <b>Robotics PhD candidate</b> and <b>NSF-GRFP fellow</b> at Georgia Tech working on sensor fusion, state estimation, and learning-based control for highly dynamic systems. My research interests include Bayesian estimation, reinforcement learning, and multimodal sensing/inspection.
+I’m a **Robotics PhD candidate at Georgia Tech** (NSF GRFP Fellow, expected May 2027) working on the problem of **real-time sensing and control for highly dynamic, uncertain physical systems**. My research builds tools that perceive, reason under uncertainty, and act reliably on hardware — not just in simulation.
 
-Recently, I’ve worked on nonlinear Kalman filtering and real-time state estimation, robust feed-forward control with deep RL, and automated point cloud registration pipelines (Open3D) for arbitrary LiDAR data.
+My PhD thesis — *"Multi-material Mass Flow Monitoring and Control for Powder-Blown Directed Energy Deposition"* — develops a complete closed-loop system combining multi-physics sensor fusion, provably-stable adaptive control, and machine learning for next-generation metal additive manufacturing. In parallel, I work with **Los Alamos National Laboratory** on perception and inspection algorithms for autonomous NDE systems.
+
+---
+
+### Research Highlights
+
+<div class="row mt-2 mb-3">
+  <div class="col-sm-4">
+    <div class="card p-3 h-100" style="border-top: 3px solid var(--global-theme-color);">
+      <h6><i class="fa-solid fa-wave-square"></i> Adaptive Control</h6>
+      <p class="small mb-0">MRAC with <strong>Lyapunov-stable parameter adaptation</strong> for feedforward control of nonlinear systems with large delays. Derived from first principles — stability guaranteed.</p>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card p-3 h-100" style="border-top: 3px solid var(--global-theme-color);">
+      <h6><i class="fa-solid fa-satellite-dish"></i> Multi-Physics Sensing</h6>
+      <p class="small mb-0">Designed 4 novel orthogonal in-line sensors (piezoelectric, triboelectric, optical, ultrasonic) with <strong>Bayesian fusion</strong> for robust state estimation under noise and disturbances.</p>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card p-3 h-100" style="border-top: 3px solid var(--global-theme-color);">
+      <h6><i class="fa-solid fa-brain"></i> Learning-Based Systems</h6>
+      <p class="small mb-0">VLA foundation model UQ (99.2% on LIBERO), deep RL for nonlinear control, PLSR multi-material sensing, and sensor distillation via <strong>cross-modal knowledge transfer</strong>.</p>
+    </div>
+  </div>
+</div>
+
+---
+
+### Selected Work
+
+- **MRAC + Lyapunov Adaptive Control** *(Stebner Lab)*: Derived Lyapunov-stable adaptation laws for Model Reference Adaptive Control of powder transport with 10–60s delays; **70% fluctuation mitigation** demonstrated. FPGA-deployed.
+
+- **Multi-Physics Sensor Array** *(Stebner Lab)*: Designed and validated 4 novel in-line sensors with Bayesian fusion for real-time mass flow monitoring in PB-DED. **3 patents pending**.
+
+- **Deformable Convolution for Curved-Surface NDE** *(LANL)*: Invented deformable kernel wavenumber filtering for accurate full-field thickness estimation on arbitrary curved geometries. Patent pending, targeting *MSSP 2026*.
+
+- **Ultrasonic Inspection UQ** *(LANL)*: Theoretical UQ framework propagating measurement uncertainty through full inspection pipelines. Published at **IWSHM 2023**, presented at **AIVELA 2025**.
+
+- **Vision-Language Action Models** *(CS 8803)*: Bayesian LoRA + Laplace approximation for OOD uncertainty quantification on OpenVLA; **99.2% success on LIBERO** via confidence-based action allocation with ~2× inference speedup.
+
+---
+
+### Background
+
+Before Georgia Tech, I studied Mechanical Engineering at Drexel University and co-founded **VitalEyes** — a computer vision startup deployed in 5 GT research labs. I manage Georgia Tech's Rapid Prototyping & Electronics Lab (55+ students trained) and volunteer with Atlanta-area STEM outreach.
+
+I'm broadly excited about robotics problems that sit at the intersection of **rigorous control theory, hardware-grounded sensing, and learning** — especially in high-stakes deployment contexts like autonomous vehicles, inspection robotics, and manufacturing automation.
