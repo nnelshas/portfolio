@@ -1,20 +1,13 @@
 <div class="col">
   <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
     <div class="card h-100 hoverable project-card">
-      {% if project.img %}
+      {% if project.img or project.hover_video %}
         <div class="project-media-wrapper">
-          {%
-            include figure.liquid
-            loading="eager"
-            path=project.img
-            sizes = "250px"
-            alt="project thumbnail"
-            class="card-img-top project-thumbnail"
-          %}
           {% if project.hover_video %}
             <video
-              class="project-hover-video"
+              class="project-card-video"
               src="{{ project.hover_video | relative_url }}"
+              poster="{{ project.img | relative_url }}"
               muted
               loop
               playsinline
@@ -24,6 +17,15 @@
             <div class="project-video-badge">
               <i class="fa-solid fa-play"></i> Preview
             </div>
+          {% else %}
+            {%
+              include figure.liquid
+              loading="eager"
+              path=project.img
+              sizes = "250px"
+              alt="project thumbnail"
+              class="card-img-top project-thumbnail"
+            %}
           {% endif %}
         </div>
       {% endif %}

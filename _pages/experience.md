@@ -22,7 +22,7 @@ nav_order: 4
       <ul>
         <li>Developed <strong>MRAC with Lyapunov-stable parameter adaptation</strong> for feedforward control of a nonlinear powder transport system with 10–60s delays; derived adaptation laws from first principles; <strong>70% fluctuation mitigation</strong> achieved in preliminary FPGA-deployed implementation.</li>
         <li>Designed a <strong>nonlinear Kalman filter (EKF/UKF)</strong> for real-time multi-physics sensor fusion and state estimation on a high-speed physical testbed — sub-millisecond cycle times, robust to sensor dropout.</li>
-        <li>Engineered a <strong>4-modality sensor array</strong> (piezoelectric, triboelectric, optical attenuation, optical reflection) for in-line PB-DED mass flow monitoring — validated against precision mass scale ground truth, <strong>3 patents pending</strong>.</li>
+        <li>Designed a <strong>3-sensor array</strong> (piezoelectric, triboelectric, optical) for in-line PB-DED mass flow monitoring — validated against precision mass scale ground truth, <strong>5 patents pending</strong>.</li>
         <li>Deployed a <strong>Deep RL (PPO) agent</strong> for robust feed-forward control of a nonlinear high-delay plant; 3× reduction in tracking error vs. classical baselines; zero-shot sim-to-real transfer.</li>
         <li>Manages the Rapid Prototyping and Electronics Lab; <strong>trained 55 undergraduates</strong>, directly mentored 4 graduate researchers.</li>
       </ul>
@@ -39,7 +39,7 @@ nav_order: 4
         <hr class="my-2">
         <p class="small mb-0"><strong>4 papers</strong><br>in preparation</p>
         <hr class="my-2">
-        <p class="small mb-0"><strong>3 patents</strong><br>pending</p>
+        <p class="small mb-0"><strong>5 patents</strong><br>pending</p>
       </div>
     </div>
   </div>
@@ -69,7 +69,7 @@ nav_order: 4
         <hr class="my-2">
         <p class="small mb-0"><strong>1 published</strong><br>IWSHM 2023</p>
         <hr class="my-2">
-        <p class="small mb-0"><strong>2 in prep</strong><br>MSSP 2026</p>
+        <p class="small mb-0"><strong>1 in prep</strong><br>MSSP 2026</p>
       </div>
     </div>
   </div>

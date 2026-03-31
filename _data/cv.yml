@@ -57,7 +57,7 @@ cv:
           - "**PhD Thesis**: *Multi-material Mass Flow Monitoring and Control for Powder-Blown Directed Energy Deposition* — developing real-time sensing and control systems for advanced metal additive manufacturing."
           - "Designed and deployed a **nonlinear Kalman filter** for real-time multi-physics sensor fusion and state estimation on a high-speed physical testbed — sub-millisecond cycle times, robust to sensor dropout."
           - "Developed **MRAC with Lyapunov-stable parameter adaptation** for feedforward control of a nonlinear powder transport system with 10–60s delays; derived adaptation laws from Lyapunov stability theory; achieved **70% fluctuation mitigation** in preliminary implementation."
-          - "Engineered a **multi-physics sensor array** (piezoelectric, triboelectric, optical attenuation, optical reflection) for real-time in-line powder mass flow monitoring — 4 novel sensor modalities validated, 3 patents pending."
+          - "Designed a **3-sensor array** (piezoelectric, triboelectric, optical) for real-time in-line powder mass flow monitoring — validated against precision mass scale, **5 patents pending**."
           - "Deployed a **Deep RL (PPO) agent** to achieve robust feed-forward control of a nonlinear high-delay system; achieved 3× reduction in tracking error vs. classical baselines with zero-shot sim-to-real transfer."
           - "Manage the Rapid Prototyping and Electronics Lab; **trained 55 undergraduates** in manufacturing, mentored 4 graduate researchers."
 
@@ -67,7 +67,7 @@ cv:
         start_date: 2022
         end_date: Present
         highlights:
-          - "**Invented** deformable convolution workflow for wavenumber estimation and anomaly detection on arbitrary curved 3D geometries — patent pending (LANL)."
+          - "**Invented** deformable convolution workflow for wavenumber estimation and anomaly detection on arbitrary curved 3D geometries — **1 patent pending** (LANL)."
           - "Developed rigorous **theoretical UQ framework** for full-field ultrasonic inspection pipelines; work published at *IWSHM 2023* and presented at *AIVELA 2025*."
           - "Engineered fully **automated 3D point cloud registration pipeline** (FPFH + RANSAC + ICP + pose graph optimization) using Open3D for multi-scan LiDAR data at scale."
 
@@ -111,7 +111,7 @@ cv:
           - A. Stebner
         publisher: "Additive Manufacturing (manuscript in preparation, targeting April 2026)"
         releaseDate: 2026
-        summary: "Novel multi-physics sensor array (piezoelectric, triboelectric, optical) for in-line PB-DED mass flow monitoring. 3 patents pending."
+        summary: "Novel 3-sensor array (piezoelectric, triboelectric, optical) for in-line PB-DED mass flow monitoring. 5 patents pending (GT)."
 
       - title: "Real-time adaptive feedforward powder flow control for directed energy deposition"
         authors:

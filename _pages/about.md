@@ -28,9 +28,7 @@ latest_posts:
   enabled: false
 ---
 
-I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow 2024, expected May 2027) working on the problem of **real-time sensing and control for highly dynamic, uncertain physical systems**. My research builds tools that perceive, reason under uncertainty, and act reliably on hardware — not just in simulation.
-
-My PhD thesis — *"Multi-material Mass Flow Monitoring and Control for Powder-Blown Directed Energy Deposition"* — develops a complete closed-loop system combining multi-physics sensor fusion, provably-stable adaptive control, and machine learning for next-generation metal additive manufacturing. In parallel, I work with **Los Alamos National Laboratory** on perception and inspection algorithms for autonomous NDE systems.
+I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow 2024, expected May 2027) researching **real-time sensing and control for highly dynamic, uncertain physical systems**. My PhD thesis — *"Multi-material Mass Flow Monitoring and Control for Powder-Blown Directed Energy Deposition"* — combines multi-physics sensor fusion, provably-stable adaptive control, and machine learning for next-generation metal additive manufacturing. In parallel, I collaborate with **Los Alamos National Laboratory** on perception and inspection algorithms for autonomous NDE.
 
 ---
 
@@ -39,19 +37,19 @@ My PhD thesis — *"Multi-material Mass Flow Monitoring and Control for Powder-B
 <div class="row mt-2 mb-3">
   <div class="col-sm-4">
     <div class="card p-3 h-100" style="border-top: 3px solid var(--global-theme-color);">
-      <h6><i class="fa-solid fa-wave-square"></i> Adaptive Control</h6>
+      <h6><strong><i class="fa-solid fa-wave-square"></i> Adaptive Control</strong></h6>
       <p class="small mb-0">MRAC with <strong>Lyapunov-stable parameter adaptation</strong> for feedforward control of nonlinear systems with large delays. Derived from first principles — stability guaranteed.</p>
     </div>
   </div>
   <div class="col-sm-4">
     <div class="card p-3 h-100" style="border-top: 3px solid var(--global-theme-color);">
-      <h6><i class="fa-solid fa-satellite-dish"></i> Multi-Physics Sensing</h6>
-      <p class="small mb-0">Designed 4 novel orthogonal in-line sensors (piezoelectric, triboelectric, optical, ultrasonic) with <strong>Bayesian fusion</strong> for robust state estimation under noise and disturbances.</p>
+      <h6><strong><i class="fa-solid fa-satellite-dish"></i> Multi-Physics Sensing</strong></h6>
+      <p class="small mb-0">Designed 3 novel in-line sensors (piezoelectric, triboelectric, optical) with <strong>Bayesian fusion</strong> for robust state estimation under noise and disturbances.</p>
     </div>
   </div>
   <div class="col-sm-4">
     <div class="card p-3 h-100" style="border-top: 3px solid var(--global-theme-color);">
-      <h6><i class="fa-solid fa-brain"></i> Learning-Based Systems</h6>
+      <h6><strong><i class="fa-solid fa-brain"></i> Learning-Based Systems</strong></h6>
       <p class="small mb-0">VLA foundation model UQ (99.2% on LIBERO), deep RL for nonlinear control, PLSR multi-material sensing, and sensor distillation via <strong>cross-modal knowledge transfer</strong>.</p>
     </div>
   </div>
@@ -63,7 +61,7 @@ My PhD thesis — *"Multi-material Mass Flow Monitoring and Control for Powder-B
 
 - **MRAC + Lyapunov Adaptive Control** *(Stebner Lab)*: Derived Lyapunov-stable adaptation laws for Model Reference Adaptive Control of powder transport with 10–60s delays; **70% fluctuation mitigation** demonstrated. FPGA-deployed.
 
-- **Multi-Physics Sensor Array** *(Stebner Lab)*: Designed and validated 4 novel in-line sensors with Bayesian fusion for real-time mass flow monitoring in PB-DED. **3 patents pending**.
+- **Multi-Physics Sensor Array** *(Stebner Lab)*: Designed and validated 3 novel in-line sensors (piezoelectric, triboelectric, optical) with Bayesian fusion for real-time mass flow monitoring in PB-DED. **5 patents pending** (GT) · **1 patent pending** (LANL).
 
 - **Deformable Convolution for Curved-Surface NDE** *(LANL)*: Invented deformable kernel wavenumber filtering for accurate full-field thickness estimation on arbitrary curved geometries. Patent pending, targeting *MSSP 2026*.
 

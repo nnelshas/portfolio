@@ -24,7 +24,7 @@
 
   function init() {
     document.querySelectorAll(".project-card").forEach(function (el) {
-      attachHover(el, ".project-hover-video");
+      attachHover(el, ".project-card-video");
     });
     document.querySelectorAll(".pub-preview-wrapper").forEach(function (el) {
       attachHover(el, ".pub-preview-video");
