@@ -1,12 +1,12 @@
 cv:
   name: Neel Shah
-  label: Robotics PhD Candidate | Sensor Fusion · Adaptive Control · Learning-Based Systems
+  label: Robotics PhD Candidate | NSF-GRFP Fellow | Sensor Fusion · Adaptive Control · Learning-Based Systems
   email: nshah@gatech.edu
   phone: 703-896-6210
   location: Atlanta, GA
   image: assets/img/meLinked.jpg
   summary: >
-    NSF GRFP Fellow and Robotics PhD candidate at Georgia Tech (expected May 2027) specializing in
+    NSF-GRFP Fellow (2024) and Robotics PhD candidate at Georgia Tech (expected May 2027) specializing in
     multi-physics sensor fusion, adaptive control (MRAC + Lyapunov), and learning-based systems for
     highly dynamic, real-world applications. Research spans the full autonomy stack — from system
     identification and provably-stable adaptive control to VLA foundation models — with a consistent
@@ -29,7 +29,7 @@ cv:
         end_date: "2027 (expected)"
         score: "GPA: 4.0 / 4.0"
         highlights:
-          - "**NSF Graduate Research Fellowship Program (GRFP) Fellow** — one of ~2,000 awarded nationally per year"
+          - "**NSF-GRFP Fellow (2024)** — one of ~2,000 awarded nationally per year"
           - "Finalist, ME Outstanding Scholar Award (2022)"
           - "Relevant coursework: Robot Intelligence, Vision-Language Models, Nonlinear Control, Probability & Statistics, Advanced Dynamics"
 
@@ -92,8 +92,8 @@ cv:
           - "Building math skills with underserved K-12 students via **Agape Community Outreach**."
 
     Awards:
-      - title: NSF Graduate Research Fellowship Program (GRFP)
-        date: 2022
+      - title: NSF-GRFP (Graduate Research Fellowship)
+        date: 2024
         awarder: National Science Foundation
         summary: "Highly competitive national fellowship (~2,000 awarded/year). Provides 3 years of stipend and tuition support."
 
@@ -126,9 +126,9 @@ cv:
         authors:
           - Neel Shah
           - et al.
-        publisher: "Mechanical Systems and Signal Processing (manuscript in preparation, targeting April 2026); patent pending (LANL)"
+        publisher: "Mechanical Systems and Signal Processing (manuscript in preparation, targeting April 2026) · patent pending (LANL)"
         releaseDate: 2026
-        summary: "Novel deformable convolution framework for full-field wavenumber filtering on arbitrary curved geometries."
+        summary: "Novel deformable convolution framework for full-field wavenumber filtering on arbitrary curved geometries. One of two publications from LANL research; the UQ paper (IWSHM 2023) is separately published."
 
       - title: "Uncertainty Quantification of Thickness Estimation via Full-field Ultrasonic Inspection"
         authors:

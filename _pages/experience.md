@@ -35,7 +35,7 @@ nav_order: 4
     <div class="col-sm-3 text-center">
       <div class="card p-3" style="background: var(--global-card-bg-color);">
         <i class="fa-solid fa-flask fa-2x" style="color: var(--global-theme-color);"></i>
-        <p class="mt-2 small mb-0"><strong>NSF GRFP</strong><br>Fellow</p>
+        <p class="mt-2 small mb-0"><strong>NSF-GRFP</strong><br>Fellow 2024</p>
         <hr class="my-2">
         <p class="small mb-0"><strong>4 papers</strong><br>in preparation</p>
         <hr class="my-2">

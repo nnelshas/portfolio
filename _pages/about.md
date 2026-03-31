@@ -5,7 +5,7 @@ permalink: /
 subtitle: >
   Robotics PhD Candidate · Georgia Tech &nbsp;|&nbsp;
   <a href="mailto:nshah@gatech.edu">nshah@gatech.edu</a> &nbsp;|&nbsp;
-  NSF GRFP Fellow
+  NSF-GRFP Fellow
 
 profile:
   align: right
@@ -28,7 +28,7 @@ latest_posts:
   enabled: false
 ---
 
-I’m a **Robotics PhD candidate at Georgia Tech** (NSF GRFP Fellow, expected May 2027) working on the problem of **real-time sensing and control for highly dynamic, uncertain physical systems**. My research builds tools that perceive, reason under uncertainty, and act reliably on hardware — not just in simulation.
+I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow 2024, expected May 2027) working on the problem of **real-time sensing and control for highly dynamic, uncertain physical systems**. My research builds tools that perceive, reason under uncertainty, and act reliably on hardware — not just in simulation.
 
 My PhD thesis — *"Multi-material Mass Flow Monitoring and Control for Powder-Blown Directed Energy Deposition"* — develops a complete closed-loop system combining multi-physics sensor fusion, provably-stable adaptive control, and machine learning for next-generation metal additive manufacturing. In parallel, I work with **Los Alamos National Laboratory** on perception and inspection algorithms for autonomous NDE systems.
 
