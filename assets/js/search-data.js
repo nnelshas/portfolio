@@ -18,10 +18,24 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "Research projects spanning sensor fusion, state estimation, deep RL, and vision-language action models. Hover over cards to preview demos.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/portfolio/projects/";
+          },
+        },{id: "nav-experience",
+          title: "experience",
+          description: "Research, industry, and leadership experience.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/portfolio/experience/";
+          },
+        },{id: "nav-resume",
+          title: "Resume",
+          description: "Download my resume as a PDF or view it below. Targeting robotics engineering roles in perception, state estimation, and learning-based control.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/portfolio/resume/";
           },
         },{id: "nav-repositories",
           title: "repositories",
@@ -29,13 +43,6 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/portfolio/repositories/";
-          },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "Download my CV as a PDF or view it below.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/portfolio/cv/";
           },
         },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
         
@@ -80,9 +87,39 @@ ninja.data = [{
           description: "STEM enrichment for underserved K-12 students in Atlanta.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/community_stem_outreach/";
-            },},{id: "projects-vision-language-foundation-models",
-          title: 'Vision-Language Foundation Models',
-          description: "OpenVLA uncertainty quantification and inference optimization (CS 8803).",
+            },},{id: "projects-adaptive-mass-flow-control-for-powder-blown-directed-energy-deposition",
+          title: 'Adaptive Mass Flow Control for Powder-Blown Directed Energy Deposition',
+          description: "MRAC with Lyapunov-stable parameter adaptation for precise feedforward control of stochastic powder transport dynamics with large time delays — 70% fluctuation mitigation demonstrated.",
+          section: "Projects",handler: () => {
+              window.location.href = "/portfolio/projects/ded_mass_flow_control/";
+            },},{id: "projects-deformable-kernels-for-curved-surface-wavenumber-filtering",
+          title: 'Deformable Kernels for Curved-Surface Wavenumber Filtering',
+          description: "Novel deformable convolution approach for accurate full-field thickness estimation on arbitrary curved geometries — patent pending, targeting MSSP 2026.",
+          section: "Projects",handler: () => {
+              window.location.href = "/portfolio/projects/deformable_convolution_nde/";
+            },},{id: "projects-automated-3d-point-cloud-registration-for-lidar",
+          title: 'Automated 3D Point Cloud Registration for LiDAR',
+          description: "Scalable automated point cloud registration pipeline using Open3D for arbitrary multi-scan LiDAR data at LANL.",
+          section: "Projects",handler: () => {
+              window.location.href = "/portfolio/projects/lidar_point_cloud_registration/";
+            },},{id: "projects-multi-physics-mass-flow-sensor-array-for-ded",
+          title: 'Multi-Physics Mass Flow Sensor Array for DED',
+          description: "Novel piezoelectric, triboelectric, optical, and ultrasonic sensors for real-time powder mass flow monitoring in Powder-Blown Directed Energy Deposition, with Bayesian multi-modal fusion.",
+          section: "Projects",handler: () => {
+              window.location.href = "/portfolio/projects/multiphysics_sensor_array/";
+            },},{id: "projects-spectral-multi-material-mass-flow-sensing",
+          title: 'Spectral Multi-Material Mass Flow Sensing',
+          description: "Broadband reflectance spectroscopy with PLSR calibration for simultaneous real-time multi-material powder composition monitoring in PB-DED — enabling reliable functionally graded material fabrication.",
+          section: "Projects",handler: () => {
+              window.location.href = "/portfolio/projects/spectral_multimaterial_sensing/";
+            },},{id: "projects-uncertainty-quantification-for-ultrasonic-nde-inspection",
+          title: 'Uncertainty Quantification for Ultrasonic NDE Inspection',
+          description: "Rigorous theoretical UQ framework for full-field ultrasonic thickness estimation pipelines — published at IWSHM 2023 and AIVELA 2025.",
+          section: "Projects",handler: () => {
+              window.location.href = "/portfolio/projects/ultrasonic_inspection_uq/";
+            },},{id: "projects-vision-language-action-models",
+          title: 'Vision-Language Action Models',
+          description: "Bayesian uncertainty quantification and inference optimization for OpenVLA-OFT robot manipulation.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/vision_language_foundation_models/";
             },},{id: "teachings-data-science-fundamentals",
