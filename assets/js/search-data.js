@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-resume",
           title: "resume",
-          description: "&amp;nbsp; Download PDF Resume &amp;nbsp; Targeting robotics engineering roles in perception, state estimation, and learning-based control.",
+          description: "Targeting robotics engineering roles in perception, state estimation, and learning-based control.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/portfolio/resume/";
