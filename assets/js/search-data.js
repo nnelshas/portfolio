@@ -82,7 +82,12 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-community-stem-outreach",
+          section: "News",},{id: "projects-ai-grand-prix-autonomous-drone-racing",
+          title: 'AI Grand Prix — Autonomous Drone Racing',
+          description: "SO(3) geometric control, one-shot gate detection, and a Kalman filter for on-the-fly gate localization — a full autonomy stack for high-speed FPV drone racing.",
+          section: "Projects",handler: () => {
+              window.location.href = "/portfolio/projects/ai_grand_prix_drone_racing/";
+            },},{id: "projects-community-stem-outreach",
           title: 'Community STEM Outreach',
           description: "STEM enrichment for underserved K-12 students in Atlanta.",
           section: "Projects",handler: () => {
@@ -97,6 +102,11 @@ ninja.data = [{
           description: "FPFH + RANSAC + ICP + pose graph pipeline for multi-scan LiDAR registration at LANL — fully automated, no manual alignment.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/lidar_point_cloud_registration/";
+            },},{id: "projects-lyapunov-based-mrac-for-powder-flow",
+          title: 'Lyapunov-Based MRAC for Powder Flow',
+          description: "Robust model reference adaptive control that suppresses rotary harmonic instabilities in directed-energy-deposition powder flow — validated on real experimental data.",
+          section: "Projects",handler: () => {
+              window.location.href = "/portfolio/projects/mrac_powder_flow_control/";
             },},{id: "projects-vision-language-action-models",
           title: 'Vision-Language Action Models',
           description: "Bayesian UQ + dynamic action allocation for OpenVLA-OFT — 99.2% success on LIBERO benchmark.",
