@@ -69,6 +69,8 @@ I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow 2024, expect
 
 - **Vision-Language Action Models** *(CS 8803)*: Bayesian LoRA + Laplace approximation for OOD uncertainty quantification on OpenVLA; **99.2% success on LIBERO** via confidence-based action allocation with ~2× inference speedup.
 
+- **Autonomous Drone Racing — AI Grand Prix** *(Personal)*: Built a full perception-to-control autonomy stack for high-speed FPV racing — an **SO(3) geometric controller**, **one-shot CV gate detection**, and a **Kalman filter** for on-the-fly gate localization, flown through unmapped courses in simulation.
+
 ---
 
 ### Background

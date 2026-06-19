@@ -4,7 +4,7 @@ title: Vision-Language Action Models
 description: Bayesian UQ + dynamic action allocation for OpenVLA-OFT — 99.2% success on LIBERO benchmark.
 img: assets/img/proj_vla_thumb.jpg
 hover_video: assets/video/vla_success.mp4
-importance: 1
+importance: 2
 category: research
 ---
 
@@ -79,4 +79,4 @@ category: research
 
 `PyTorch` · `OpenVLA` · `LIBERO` · `LoRA / PEFT` · `Laplace Approximation` · `HuggingFace` · `SLURM`
 
-*CS 8803: Vision-Language Models — Georgia Tech, Fall 2025*
+_CS 8803: Vision-Language Models — Georgia Tech, Fall 2025_

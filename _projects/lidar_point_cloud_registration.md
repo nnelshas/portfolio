@@ -3,7 +3,7 @@ layout: page
 title: Automated 3D Point Cloud Registration
 description: FPFH + RANSAC + ICP + pose graph pipeline for multi-scan LiDAR registration at LANL — fully automated, no manual alignment.
 img: assets/img/proj_pointcloud.jpg
-importance: 2
+importance: 5
 category: research
 ---
 
@@ -47,21 +47,25 @@ category: research
 ## Methods
 
 ### Coarse Alignment — FPFH + RANSAC
+
 - **FPFH descriptors** capture local 3D geometry per point
 - **RANSAC** finds robust cross-scan correspondences
 - **Works with low overlap** and symmetric geometries
 
 ### Fine Alignment — ICP
+
 - **Point-to-plane ICP** for high-precision refinement
 - **Colored ICP** for partial overlap / non-rigid distortions
 - **Jointly optimizes** geometry + intensity
 
 ### Global Consistency — Pose Graph
+
 - **Nodes:** scan poses; **edges:** pairwise registration transforms
 - **Global optimization** minimizes accumulated drift
 - **Loop closure** for drift-free multi-scan reconstruction
 
 ### Automation
+
 - **Zero manual steps** — scan ordering and strategy fully automated
 - **Quality-based failure detection** — re-estimates or omits bad scans
 - **Scales to 100+ scans** via hierarchical merging
@@ -80,4 +84,4 @@ category: research
 
 `Open3D` · `Python` · `NumPy` · `RANSAC` · `ICP` · `Pose Graph Optimization`
 
-*Los Alamos National Laboratory · 2022–Present*
+_Los Alamos National Laboratory · 2022–Present_
