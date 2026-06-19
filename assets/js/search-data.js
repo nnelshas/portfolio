@@ -16,33 +16,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/portfolio/publications/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "Research projects spanning sensor fusion, state estimation, deep RL, and vision-language action models. Hover over cards to preview demos.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/portfolio/projects/";
-          },
-        },{id: "nav-experience",
-          title: "experience",
-          description: "Research, industry, and leadership experience.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/portfolio/experience/";
-          },
         },{id: "nav-resume",
           title: "resume",
           description: "Targeting robotics engineering roles in perception, state estimation, and learning-based control.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/portfolio/resume/";
-          },
-        },{id: "nav-repositories",
-          title: "repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/portfolio/repositories/";
           },
         },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
         
@@ -92,6 +71,11 @@ ninja.data = [{
           description: "STEM enrichment for underserved K-12 students in Atlanta.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/community_stem_outreach/";
+            },},{id: "projects-deformable-kernels-for-curved-surface-nde",
+          title: 'Deformable Kernels for Curved-Surface NDE',
+          description: "Deformable-convolution wavenumber filtering that warps its kernel to local geometry for full-field thickness estimation on arbitrary curved surfaces.",
+          section: "Projects",handler: () => {
+              window.location.href = "/portfolio/projects/deformable_convolution_nde/";
             },},{id: "projects-kalman-filter-sensor-fusion-for-ded-mass-flow",
           title: 'Kalman Filter Sensor Fusion for DED Mass Flow',
           description: "EKF with gain-scheduled nonlinear calibration fusing piezoelectric and triboelectric sensors for real-time mass flow estimation in PB-DED.",
