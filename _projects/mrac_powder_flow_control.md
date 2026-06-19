@@ -4,7 +4,7 @@ title: Lyapunov-Based MRAC for Powder Flow
 description: Robust model reference adaptive control that suppresses rotary harmonic instabilities in directed-energy-deposition powder flow — validated on real experimental data.
 img: assets/img/proj_mrac.jpg
 hover_video: assets/video/mrac_control_preview.mp4
-importance: 3
+importance: 4
 category: research
 ---
 

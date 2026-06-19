@@ -3,7 +3,7 @@ layout: page
 title: Kalman Filter Sensor Fusion for DED Mass Flow
 description: EKF with gain-scheduled nonlinear calibration fusing piezoelectric and triboelectric sensors for real-time mass flow estimation in PB-DED.
 img: assets/img/proj_sensor_fusion.jpg
-importance: 4
+importance: 5
 category: research
 ---
 

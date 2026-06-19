@@ -3,7 +3,7 @@ layout: page
 title: Automated 3D Point Cloud Registration
 description: FPFH + RANSAC + ICP + pose graph pipeline for multi-scan LiDAR registration at LANL — fully automated, no manual alignment.
 img: assets/img/proj_pointcloud.jpg
-importance: 5
+importance: 6
 category: research
 ---
 

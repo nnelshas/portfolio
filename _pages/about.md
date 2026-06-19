@@ -16,9 +16,9 @@ profile:
     <p><i class="fa-solid fa-envelope"></i> <a href="mailto:nshah@gatech.edu">nshah@gatech.edu</a></p>
     <p><i class="fa-brands fa-github"></i> <a href="https://github.com/nnelshas" target="_blank">nnelshas</a></p>
     <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/neelshah8" target="_blank">neelshah8</a></p>
-    <p><i class="fa-solid fa-file-pdf"></i> <a href="/portfolio/assets/pdf/resume.pdf" target="_blank">Resume (PDF)</a></p>
+    <p><i class="fa-solid fa-file-pdf"></i> <a href="/portfolio/resume/">Resume</a></p>
 
-selected_papers: true
+selected_papers: false
 social: true
 
 announcements:
@@ -28,7 +28,7 @@ latest_posts:
   enabled: false
 ---
 
-I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow 2024, expected May 2027) researching **real-time sensing and control for highly dynamic, uncertain physical systems**. My PhD thesis — *"Multi-material Mass Flow Monitoring and Control for Powder-Blown Directed Energy Deposition"* — combines multi-physics sensor fusion, provably-stable adaptive control, and machine learning for next-generation metal additive manufacturing. In parallel, I collaborate with **Los Alamos National Laboratory** on perception and inspection algorithms for autonomous NDE.
+I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow, expected May 2027) building **real-time sensing and control for highly dynamic, uncertain physical systems** — at the intersection of **rigorous control theory, hardware-grounded sensing, and learning**. My thesis fuses multi-physics sensing, provably-stable adaptive control, and ML for metal additive manufacturing; in parallel I work with **Los Alamos National Laboratory** on perception and inspection for autonomous NDE. I’m most excited by high-stakes deployment problems — autonomous vehicles, inspection robotics, and manufacturing automation.
 
 ---
 
@@ -57,24 +57,18 @@ I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow 2024, expect
 
 ---
 
-### Selected Work
+### Projects
 
-- **MRAC + Lyapunov Adaptive Control** *(Stebner Lab)*: Derived Lyapunov-stable adaptation laws for Model Reference Adaptive Control of powder transport with 10–60s delays; **70% fluctuation mitigation** demonstrated. FPGA-deployed.
+<p class="text-center" style="margin-top: -4px; margin-bottom: 1.2rem; opacity: 0.85;">
+  <i class="fa-solid fa-circle-play" style="color: var(--global-theme-color);"></i>
+  <strong>Hover any card to play a short demo</strong> · click to dive in.
+</p>
 
-- **Multi-Physics Sensor Array** *(Stebner Lab)*: Designed and validated 3 novel in-line sensors (piezoelectric, triboelectric, optical) with Bayesian fusion for real-time mass flow monitoring in PB-DED. **5 patents pending** (GT) · **1 patent pending** (LANL).
-
-- **Deformable Convolution for Curved-Surface NDE** *(LANL)*: Invented deformable kernel wavenumber filtering for accurate full-field thickness estimation on arbitrary curved geometries. Patent pending, targeting *MSSP 2026*.
-
-- **Ultrasonic Inspection UQ** *(LANL)*: Theoretical UQ framework propagating measurement uncertainty through full inspection pipelines. Published at **IWSHM 2023**, presented at **AIVELA 2025**.
-
-- **Vision-Language Action Models** *(CS 8803)*: Bayesian LoRA + Laplace approximation for OOD uncertainty quantification on OpenVLA; **99.2% success on LIBERO** via confidence-based action allocation with ~2× inference speedup.
-
-- **Autonomous Drone Racing — AI Grand Prix** *(Personal)*: Built a full perception-to-control autonomy stack for high-speed FPV racing — an **SO(3) geometric controller**, **one-shot CV gate detection**, and a **Kalman filter** for on-the-fly gate localization, flown through unmapped courses in simulation.
-
----
-
-### Background
-
-Before Georgia Tech, I studied Mechanical Engineering at Drexel University and co-founded **VitalEyes** — a computer vision startup deployed in 5 GT research labs. I manage Georgia Tech's Rapid Prototyping & Electronics Lab (55+ students trained) and volunteer with Atlanta-area STEM outreach.
-
-I'm broadly excited about robotics problems that sit at the intersection of **rigorous control theory, hardware-grounded sensing, and learning** — especially in high-stakes deployment contexts like autonomous vehicles, inspection robotics, and manufacturing automation.
+<div class="projects">
+  <div class="row row-cols-1 row-cols-md-3">
+    {% assign sorted_projects = site.projects | sort: "importance" %}
+    {% for project in sorted_projects %}
+      {% include projects.liquid %}
+    {% endfor %}
+  </div>
+</div>

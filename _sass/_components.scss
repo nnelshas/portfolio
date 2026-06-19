@@ -188,40 +188,58 @@ ul.task-list input[type="checkbox"] {
 .project-media-wrapper {
   position: relative;
   overflow: hidden;
+  // Fixed 16:9 box so the card reserves the correct height before the
+  // hover video's metadata loads (otherwise the poster/video collapses
+  // and "pops" open on hover).
+  aspect-ratio: 16 / 9;
+  background: #000;
 
-  // Static thumbnail (non-hover-video cards)
-  .project-thumbnail {
+  // figure.liquid wraps the thumbnail in <figure><picture><img>; flatten it
+  figure,
+  picture {
     display: block;
-    width: 100%;
+    height: 100%;
+    margin: 0;
   }
 
-  // Single video element used as both poster-freeze-frame and live preview
+  // Static thumbnail (non-hover-video cards) and the hover video both fill
+  // the box and are center-cropped so every card is the same shape.
+  .project-thumbnail,
   .project-card-video {
-    display: block;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+    margin: 0;
+  }
+
+  .project-card-video {
     pointer-events: none;
   }
 
+  // "Hover to play" hint — visible by default so viewers know the card is
+  // interactive; brightens on hover.
   .project-video-badge {
     position: absolute;
-    bottom: 8px;
+    top: 8px;
     right: 8px;
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.72);
     color: #fff;
     font-size: 0.7rem;
     font-weight: 600;
-    padding: 3px 8px;
+    padding: 4px 9px;
     border-radius: 12px;
     letter-spacing: 0.03em;
-    opacity: 0;
-    transition: opacity 300ms ease;
+    opacity: 0.95;
+    transition:
+      opacity 250ms ease,
+      background 250ms ease;
     pointer-events: none;
 
     i {
       font-size: 0.6rem;
-      margin-right: 3px;
+      margin-right: 4px;
     }
   }
 }
@@ -230,6 +248,7 @@ ul.task-list input[type="checkbox"] {
   .project-media-wrapper {
     .project-video-badge {
       opacity: 1;
+      background: var(--global-theme-color);
     }
   }
 }

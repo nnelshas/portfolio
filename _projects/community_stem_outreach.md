@@ -3,7 +3,7 @@ layout: page
 title: Community STEM Outreach
 description: STEM enrichment for underserved K-12 students in Atlanta.
 img: assets/img/11.jpg
-importance: 2
+importance: 7
 category: service
 ---
 
