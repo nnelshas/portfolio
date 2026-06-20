@@ -1,6 +1,6 @@
 ---
 layout: page
-title: AI Grand Prix — Autonomous Drone Racing
+title: Autonomous FPV Drone Racing
 description: SO(3) geometric control, one-shot gate detection, and a Kalman filter for on-the-fly gate localization — a full autonomy stack for high-speed FPV drone racing.
 img: assets/img/proj_drone_racing.jpg
 hover_video: assets/video/drone_racing_preview.mp4

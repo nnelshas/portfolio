@@ -57,7 +57,7 @@ I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow, expected Ma
 
 ---
 
-### Projects
+### Selected Works
 
 <p class="text-center" style="margin-top: -4px; margin-bottom: 1.2rem; opacity: 0.85;">
   <i class="fa-solid fa-circle-play" style="color: var(--global-theme-color);"></i>
