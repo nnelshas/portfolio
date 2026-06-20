@@ -30,6 +30,23 @@ docker compose up --build
 docker compose down
 ```
 
+### After Every Edit — Mandatory Build & Push
+
+**After making any edits to site content, you MUST:**
+
+1.  **Format Code:**
+    ```bash
+    npx prettier . --write
+    ```
+2.  **Commit and push to trigger GitHub Actions deployment:**
+    ```bash
+    git add <changed-files>
+    git commit -m "<type>: <description>"
+    git push origin master
+    ```
+
+GitHub Actions (`deploy.yml`) automatically builds the Jekyll site and deploys it to the `gh-pages` branch on every push to `master`. You do **not** need to run Docker locally before pushing — the cloud build handles it. The live site at https://nnelshas.github.io/portfolio updates within ~2–3 minutes after the push.
+
 ### Pre-Commit Checklist
 
 Before every commit, you **must** run these steps:
@@ -41,7 +58,7 @@ Before every commit, you **must** run these steps:
     # Format all files
     npx prettier . --write
     ```
-2.  **Build Locally & Verify:**
+2.  **Build Locally & Verify (optional but recommended for large changes):**
 
     ```bash
     # Rebuild the site
