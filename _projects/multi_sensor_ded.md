@@ -70,7 +70,7 @@ Every pipeline is **strictly causal** — depending only on present and past sam
 - **Optical wins on fidelity:** highest SNR, resolving fine oscillatory flow structure no other sensor could
 - Together they span the design space from **low-cost fault monitoring (piezo/tribo)** to **control-ready high-fidelity sensing (optical)**, motivating multi-modal sensor fusion
 
-_First-author manuscript (Conceptualization, Methodology, Software, Analysis) — Stebner Lab, Georgia Tech. Supported by NSF-GRFP and Georgia AIM._
+_First-author manuscript — Stebner Lab, Georgia Tech. Supported by NSF-GRFP and Georgia AIM._
 
 ---
 
