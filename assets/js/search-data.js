@@ -51,7 +51,7 @@ ninja.data = [{
               window.location.href = "/portfolio/projects/community_stem_outreach/";
             },},{id: "projects-deformable-kernels-for-curved-surface-nde",
           title: 'Deformable Kernels for Curved-Surface NDE',
-          description: "An inspection method whose filter bends to follow curved surfaces, mapping material thickness across the whole part instead of point by point.",
+          description: "Deformable convolution that bends to follow curved surfaces — maps material thickness across a full part instead of point by point.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/deformable_convolution_nde/";
             },},{id: "projects-kalman-filter-sensor-fusion-for-ded-mass-flow",
@@ -61,17 +61,22 @@ ninja.data = [{
               window.location.href = "/portfolio/projects/kalman_filtering_ded/";
             },},{id: "projects-automated-3d-point-cloud-registration",
           title: 'Automated 3D Point Cloud Registration',
-          description: "An automated pipeline that aligns and merges many LiDAR scans into one 3-D model — no manual alignment (FPFH → RANSAC → ICP → pose-graph).",
+          description: "An automated pipeline that precisely aligns multi-view LiDAR point clouds with no manual intervention — FPFH features → RANSAC → ICP refinement.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/lidar_point_cloud_registration/";
             },},{id: "projects-lyapunov-based-mrac-for-powder-flow",
           title: 'Lyapunov-Based MRAC for Powder Flow',
-          description: "A self-tuning adaptive controller that cancels the periodic surging in directed-energy-deposition powder flow — validated on real experimental data.",
+          description: "A Lyapunov-based MRAC controller that adapts to changing feeder dynamics and cancels periodic powder-flow surging — deployed on an FPGA with real stainless-steel powder.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/mrac_powder_flow_control/";
+            },},{id: "projects-multi-modal-powder-flow-sensors-for-metal-3d-printing",
+          title: 'Multi-Modal Powder-Flow Sensors for Metal 3D Printing',
+          description: "Three novel in-line sensors (piezoelectric, optical, triboelectric) benchmarked against ultrasonic baseline for DED powder flow — fused with a Kalman filter for real-time estimation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/portfolio/projects/multi_sensor_ded/";
             },},{id: "projects-vision-language-action-models",
           title: 'Vision-Language Action Models',
-          description: "Bayesian uncertainty estimates and smart action reuse for the OpenVLA robot model — 99.2% success on the LIBERO benchmark.",
+          description: "Jacobian-guided adaptive action chunking for OpenVLA — trading off chunk length vs. accuracy to hit 99.2% success on LIBERO-SPATIAL while cutting inference calls by ~2×.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/vision_language_foundation_models/";
             },},{id: "teachings-data-science-fundamentals",
@@ -97,13 +102,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("mailto:%6E%73%68%61%68@%67%61%74%65%63%68.%65%64%75", "_blank");
-        },
-      },{
-        id: 'social-github',
-        title: 'GitHub',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://github.com/nnelshas", "_blank");
         },
       },{
         id: 'social-linkedin',
