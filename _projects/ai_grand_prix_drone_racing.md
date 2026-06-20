@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Autonomous FPV Drone Racing
-description: "<strong>SO(3) geometric control</strong>, one-shot gate detection, and a <strong>Kalman filter</strong> for on-the-fly gate localization — a full autonomy stack for high-speed FPV drone racing."
+description: "<strong>SO(3) geometric control</strong>, one-shot gate detection, and an <strong>Extended Kalman Filter (EKF)</strong> for on-the-fly gate localization — a full autonomy stack for high-speed FPV drone racing."
 img: assets/img/proj_drone_racing.jpg
 hover_video: assets/video/drone_racing_preview.mp4
 importance: 1
@@ -40,7 +40,7 @@ The stack has three tightly coupled pieces:
   </div>
   <div class="col-sm-4 text-center">
     <div class="card p-3" style="border-left: 4px solid var(--global-theme-color);">
-      <h2 style="color: var(--global-theme-color); font-size: 2.5rem; margin: 0;">KF</h2>
+      <h2 style="color: var(--global-theme-color); font-size: 2.5rem; margin: 0;">EKF</h2>
       <p class="mb-0"><strong>On-the-fly gate position estimation</strong></p>
     </div>
   </div>
@@ -61,9 +61,10 @@ The stack has three tightly coupled pieces:
 - **Robust to motion:** Still finds gates through motion blur, skewed perspective, and partial views as the drone banks and rolls through the course.
 - **Feeds the estimator:** Each detection is a measurement of where the next gate sits in the image, which the filter turns into a real-world position.
 
-## Kalman Filter Gate Localization
+## EKF Gate Localization
 
-- **Locates gates on the fly:** A Kalman filter combines successive detections with the drone's own motion to recover each gate's 3-D position — the course is discovered mid-flight, not given in advance.
+- **Locates gates on the fly:** An **Extended Kalman Filter (EKF)** combines successive detections with the drone's own motion to recover each gate's 3-D position — the course is discovered mid-flight, not given in advance.
+- **Handles nonlinear geometry:** The EKF linearizes the nonlinear camera-projection measurement model at each step, fusing 2-D image detections into a metric 3-D gate estimate.
 - **Noise-aware fusion:** Treats each detection as a noisy measurement, smoothing jittery per-frame readings into a stable target the controller can aim for.
 - **Closes the loop:** The filtered gate estimate becomes the target for the trajectory and SO(3) controller, tying perception and control together through one consistent estimate.
 
@@ -72,7 +73,7 @@ The stack has three tightly coupled pieces:
 ## How It Fits Together
 
 1. **See** — the one-shot detector finds gates in the current FPV frame.
-2. **Estimate** — the Kalman filter fuses detections over time into a metric gate position.
+2. **Estimate** — the EKF fuses detections over time into a metric gate position.
 3. **Plan & Track** — an aggressive trajectory toward the estimated gate is tracked by the SO(3) geometric controller.
 4. **Repeat** — the loop runs continuously at high speed as the drone races gate-to-gate.
 
@@ -80,6 +81,6 @@ The stack has three tightly coupled pieces:
 
 ## Tools
 
-`Python` · `SO(3) Geometric Control` · `Computer Vision` · `One-Shot Detection` · `Kalman Filter` · `State Estimation` · `Quadrotor Dynamics` · `FPV Simulation`
+`Python` · `SO(3) Geometric Control` · `Computer Vision` · `One-Shot Detection` · `Extended Kalman Filter (EKF)` · `State Estimation` · `Quadrotor Dynamics` · `FPV Simulation`
 
 _Autonomous drone racing — AI Grand Prix simulator_

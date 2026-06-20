@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Vision-Language Action Models
-description: "<strong>Jacobian-guided adaptive action chunking</strong> for OpenVLA — trading off chunk length vs. accuracy to hit <strong>99.2% success</strong> on LIBERO-SPATIAL while cutting inference calls by ~2×."
+description: "Confidence-guided <strong>dynamic action chunking</strong> for OpenVLA — a last-layer <strong>Jacobian L1-norm</strong> signal truncates unreliable actions, lifting LIBERO-SPATIAL success to <strong>99.2%</strong>."
 img: assets/img/proj_vla_thumb.jpg
 hover_video: assets/video/vla_success.mp4
 importance: 2
@@ -10,14 +10,14 @@ category: research
 
 <div class="row mb-4">
   <div class="col-sm-6">
-    <h3><i class="fa-solid fa-circle-check" style="color: #28a745;"></i> Success — with adaptive chunking</h3>
+    <h3><i class="fa-solid fa-circle-check" style="color: #28a745;"></i> Success — confidence-gated truncation</h3>
     <video width="100%" controls autoplay muted loop playsinline style="border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
       <source src="{{ '/assets/video/vla_success.mp4' | relative_url }}" type="video/mp4">
     </video>
     <p style="color: #28a745; font-weight: bold; margin-top: 6px;">&#10003; Episode 43 — Task Completed</p>
   </div>
   <div class="col-sm-6">
-    <h3><i class="fa-solid fa-circle-xmark" style="color: #dc3545;"></i> Failure — fixed long chunk, no truncation</h3>
+    <h3><i class="fa-solid fa-circle-xmark" style="color: #dc3545;"></i> Failure — executing the full long chunk</h3>
     <video width="100%" controls autoplay muted loop playsinline style="border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
       <source src="{{ '/assets/video/vla_failure.mp4' | relative_url }}" type="video/mp4">
     </video>
@@ -33,65 +33,69 @@ category: research
   <div class="col-sm-4 text-center">
     <div class="card p-3" style="border-left: 4px solid var(--global-theme-color);">
       <h2 style="color: var(--global-theme-color); font-size: 2.5rem; margin: 0;">99.2%</h2>
-      <p class="mb-0"><strong>LIBERO-SPATIAL success rate</strong></p>
+      <p class="mb-0"><strong>LIBERO-SPATIAL success (train 24 / execute 12)</strong></p>
     </div>
   </div>
   <div class="col-sm-4 text-center">
     <div class="card p-3" style="border-left: 4px solid var(--global-theme-color);">
       <h2 style="color: var(--global-theme-color); font-size: 2.5rem; margin: 0;">~2×</h2>
-      <p class="mb-0"><strong>Fewer inference calls via chunking</strong></p>
+      <p class="mb-0"><strong>Fewer model calls vs. step-wise control</strong></p>
     </div>
   </div>
   <div class="col-sm-4 text-center">
     <div class="card p-3" style="border-left: 4px solid var(--global-theme-color);">
       <h2 style="color: var(--global-theme-color); font-size: 2.5rem; margin: 0;">L1</h2>
-      <p class="mb-0"><strong>Jacobian norm — best failure predictor</strong></p>
+      <p class="mb-0"><strong>Jacobian norm — strongest failure signal</strong></p>
     </div>
   </div>
 </div>
 
 ---
 
-## The Problem: Speed vs. Accuracy in VLA Models
+## The Problem: Action Chunking Isn't Free
 
-Autoregressive VLA models like OpenVLA generate one action per forward pass, running at only 3–5 Hz — far too slow for real robot control (25–50+ Hz). **Action chunking** addresses this by predicting a sequence of _k_ actions in a single pass and executing them open-loop, reducing the number of model calls by up to *k*×.
+Autoregressive VLA models like **OpenVLA** generate one action per forward pass, running at only 3–5 Hz — far too slow for the 25–50+ Hz needed for real robot control. **OpenVLA-OFT** speeds this up with **parallel decoding and action chunking**: the model predicts _K_ actions in a single pass and executes them open-loop, cutting forward passes by a factor of _K_.
 
-But longer chunks accumulate error: the robot receives less frequent sensor feedback, so stale observations eventually cause failures. This work studies that tradeoff empirically and proposes a signal to cut chunks short before they go wrong.
-
----
-
-## Confidence via the Jacobian
-
-The key insight is that the **L1 norm of the Jacobian of the final prediction layer** — measuring how sensitive the model's output is to its weights — diverges strongly between successful and failing executions. As a chunk progresses, rising L1 norm indicates the model is operating outside its training distribution.
-
-- **Success cases:** Jacobian L1 norm stays low and stable across the chunk
-- **Failure cases:** Jacobian L1 norm climbs sharply, even at early timesteps
-- **Slope difference:** ~3.56× larger in failure cases — the strongest signal tested
+But chunking is not a free lunch. Executing a long chunk without fresh feedback lets prediction error **compound** — and the model always emits a fixed number of actions regardless of how hard the moment is. Our experiments confirm the tradeoff: training on chunk size 24 but executing **all 24** actions scores only **97.6%**, because the low-confidence tail of each chunk accumulates error.
 
 ---
 
-## Adaptive Truncation
+## The Idea: Confidence Gating via the Jacobian
 
-Rather than always executing the full chunk, the system monitors the Jacobian signal at each step and **truncates the chunk early** when the norm exceeds a learned threshold, re-querying the model for fresh actions. This recovers the accuracy benefits of short chunks while preserving most of the speed benefit of chunking.
+Rather than commit to a fixed chunk size, we let the model **decide on the fly how many of its predicted actions to trust**. For each predicted action we compute the **L1 norm of the Jacobian of the final action-prediction layer** — a measure of how sensitive that action is to the model's weights. When the norm spikes past a threshold, the remaining actions are discarded and the model re-plans from the latest observation.
 
-- **Threshold tuned on validation runs** — no per-task hand-tuning
-- **Zero architectural changes** to OpenVLA — inference-time only
-- **Outperforms both** fixed-short and fixed-long chunk baselines on LIBERO-SPATIAL
+- **L1 beats every alternative:** Of ten candidate Jacobian metrics, the L1-based ones showed the largest success/failure slope separation (**≈3.56**), with statistically significant separation in the first three timesteps.
+- **It's the spikes, not the average:** Maximum L1 deviation within a chunk averaged **~87 for successes vs. ~141 for failures** — a threshold near **114** cleanly separates the two populations.
+- **Truncate the tail:** In low-confidence regimes, execution is cut to ~16 actions, dropping the unreliable tail while keeping the stable prefix.
+
+---
+
+## Results
+
+| Training chunk | Actions executed | Success rate |
+| -------------- | ---------------- | ------------ |
+| 24             | all 24           | 0.976        |
+| 24             | top 16           | 0.986        |
+| **24**         | **top 12**       | **0.992**    |
+| 8              | all 8            | 0.984        |
+
+- **Predict long, execute short:** Training on 24-action chunks but executing only the most confident **12** gives the best result in the study — **99.2%**, beating full-chunk execution.
+- **Short chunks compete at ~2× speed:** Training/executing 8 actions matches the 24-train/16-execute setting at roughly half the model calls — attractive for real-time deployment.
+- **Over-truncation backfires:** Cutting below ~8 executed actions starts to lower success, since the robot loses the coverage it needs to finish the task.
 
 ---
 
 ## Experimental Setup
 
-- **Benchmark:** LIBERO-SPATIAL — robot must identify the correct bowl among identical-looking objects based on spatial relationships, requiring consistent closed-loop observation
+- **Benchmark:** LIBERO-SPATIAL — place a bowl on a plate among identical distractor objects, distinguished only by spatial relationships, demanding consistent observation
 - **Base model:** OpenVLA fine-tuned with Optimized Fine-Tuning (OFT), action chunk size 24
-- **Training:** 110k steps on 8× NVIDIA A40 GPUs (~14 days)
-- **Loss at convergence:** ~0.007 (down from ~0.07 at 10k steps)
-- **Hardest task:** Moka-pot stacking — maximally unfamiliar spatial configuration
+- **Training:** 110k steps on 8× NVIDIA A40 GPUs (gradient accumulation 8), ~14 days
+- **Loss:** ~0.07 at 10k steps → ~0.007 at 110k steps
 
 ---
 
 ## Tools
 
-`PyTorch` · `OpenVLA` · `LIBERO` · `LoRA / PEFT` · `Jacobian Analysis` · `HuggingFace` · `SLURM`
+`PyTorch` · `OpenVLA / OpenVLA-OFT` · `LIBERO` · `Jacobian Analysis` · `HuggingFace` · `SLURM`
 
-_CS 8803: Vision-Language Models — Georgia Tech, Fall 2025_
+_CS 8803: Vision-Language Models (3-person project) — Georgia Tech, Fall 2025. My focus: the confidence-gating strategy — designing and evaluating the Jacobian-based uncertainty metrics and truncation criterion._

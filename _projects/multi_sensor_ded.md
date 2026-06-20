@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Multi-Modal Powder-Flow Sensors for Metal 3D Printing
-description: "Three novel <strong>in-line sensors</strong> (piezoelectric, optical, triboelectric) benchmarked against ultrasonic baseline for DED powder flow — fused with a <strong>Kalman filter</strong> for real-time estimation."
+title: Multi-Modal Powder-Flow Sensors
+description: "Three novel <strong>in-line sensors</strong> (piezoelectric, optical, triboelectric) benchmarked against an ultrasonic baseline for metal-3D-printing powder flow — all hit <strong>R² > 0.9</strong> at a <strong>90× lower data rate</strong>, then fused with a <strong>Kalman filter</strong>."
 img: assets/img/proj_multisensor_thumb.jpg
 importance: 5
 category: research
@@ -20,16 +20,16 @@ category: research
 
 ## Overview
 
-Powder-blown directed energy deposition (PB-DED) blows metal powder into a laser melt pool to build parts layer by layer. The powder flow rate must stay stable and well-characterized — yet commercial systems still have no real-time in-line measurement. This work designs, builds, and benchmarks **three novel in-line sensors** and compares them against an ultrasonic baseline that represents the current state of the art:
+Powder-blown directed energy deposition (PB-DED) pneumatically conveys metal powder into a laser melt pool to build parts layer by layer. A stable, well-characterized powder mass-flow rate is essential for part quality — yet commercial systems still have **no real-time in-line measurement**. This work designs, builds, and benchmarks **three novel in-line mass-flow sensors** against an ultrasonic baseline (replicated from Whiting et al.) on a common platform, all calibrated against the same mass-scale reference over a **0.4–11 g/min** range using **strictly causal** pipelines suitable for real-time control.
 
-| Sensor                | R²   | NRMSE      | Cost     |
-| --------------------- | ---- | ---------- | -------- |
-| Ultrasonic (baseline) | —    | —          | ~$1,000  |
-| Piezoelectric         | >0.9 | 4.00–6.01% | ~$5      |
-| Optical reflectance   | >0.9 | 4.00–6.01% | moderate |
-| Triboelectric         | >0.9 | 4.00–6.01% | low      |
+The headline result: each novel sensor matches ultrasonic-level average-flow accuracy (**R² > 0.9**) while sampling at a **90× lower digitized data rate** (22.2 kHz vs. 2,000 kHz). There is no single "best" sensor — each occupies a different point in the cost / fidelity / latency design space.
 
-All sensors use **strictly causal** signal processing (RMS → Savitzky–Golay), making them deployable in a real-time control loop.
+| Sensor                | Cost   | Data rate | R²    | NRMSE | Resolves oscillations? |
+| --------------------- | ------ | --------- | ----- | ----- | ---------------------- |
+| Ultrasonic (baseline) | $1,000 | 2,000 kHz | 0.961 | 3.70% | 6–7 RPM                |
+| **Optical**           | $2,000 | 22.2 kHz  | 0.956 | 4.00% | **3–7 RPM (best SNR)** |
+| **Piezoelectric**     | **$5** | 22.2 kHz  | 0.953 | 4.21% | none                   |
+| **Triboelectric**     | **$5** | 22.2 kHz  | 0.932 | 6.01% | none                   |
 
 ---
 
@@ -37,53 +37,46 @@ All sensors use **strictly causal** signal processing (RMS → Savitzky–Golay)
 
 ### Piezoelectric
 
-- Metal powder particles strike a commercial resonant buzzer; each impact generates a voltage via the piezoelectric effect
-- **$5 cost vs. $1,000 for ultrasonic** — 90× lower digitized data rate (22.2 kHz vs. 2,000 kHz)
-- UV-cured resin housing widens the flow path to increase impact rate and sensitivity
-- Best suited to low-cost fault monitoring across a distributed DED system
+- A commercial **$5 resonant buzzer** (piezoelectric ceramic on a brass disk); powder strikes the disk at a 22.5° angle and each impact generates a voltage
+- **Matches the $1,000 ultrasonic baseline's average-flow accuracy** (R² 0.953) at 1/200th the cost and a 90× lower data rate
+- Compact and **self-powered — needs no pre-amplifier** — making it a strong candidate for distributed fault monitoring across space-constrained powder branches
+- Bandpass-filtered around its (housing-shifted) ~6–9 kHz resonance; does not resolve fine hopper oscillations but tracks average flow accurately
 
 ### Optical Reflectance
 
-- First in-line reflection-based optical sensor demonstrated for PB-DED
-- Fiber probe illuminates the powder stream; reflected light intensity tracks concentration
-- **Highest SNR of all sensors tested** — clearly resolves hopper-induced oscillations at flow rates as low as 4 g/min
-- Multi-material extension is natural: paired with a spectrometer, spectral reflectance distinguishes powder species
+- First in-line **reflection-based optical** mass-flow sensor demonstrated for PB-DED: a seven-fiber bundle illuminates the stream and collects backscatter through a black-nickel-coated, sapphire-windowed flow cell
+- **Highest signal-to-noise ratio of every modality tested** — the only sensor to resolve hopper-induced flow oscillations down to **3 RPM**
+- Near-linear calibration response; the strongest candidate for future oscillation-mitigation **closed-loop control**
+- Naturally extends to multi-material sensing (spectral reflectance) and particle velocity (dual-sensor time-of-flight)
 
 ### Triboelectric (GS-TENG)
 
-- Powder particles rub a PTFE surface, transferring static charge; the current encodes concentration
-- PTFE tube wrapped in copper tape, EMI-shielded, non-intrusive
-- Low cost and near-linear calibration response; elevated noise floor at higher flow rates
-- Inspired by gas–solid triboelectric nanogenerator (GS-TENG) work in pneumatic conveying
+- Powder rubbing a **PTFE dielectric over a copper electrode** transfers static charge, transducing flow via electrostatics rather than kinetic energy — a **$5**, EMI-shielded, GS-TENG-inspired design
+- **Linear, low-cost response** with the fastest filtering latency (11.66 s), making it a complementary modality for sensor fusion
+- Highest noise of the four and approaches **saturation near 10 g/min** — the main target for future signal-conditioning work
 
 ---
 
 ## Signal Processing & Calibration
 
-All pipelines are **strictly causal**: moving-window RMS extracts an amplitude envelope, then a Savitzky–Golay smoother (3rd-order polynomial) reduces noise without look-ahead. Calibration uses polynomial regression against a mass-scale ground-truth reference; quality is reported via R², NRMSE, and MAPE. A cross-correlation alignment step removes pneumatic transport lag before fitting.
+Every pipeline is **strictly causal** — depending only on present and past samples — so it can run in a real-time loop. Raw signals are decimated to ~22.2 kHz, envelope-extracted with a moving-window **RMS** filter, then smoothed with a causal **Savitzky–Golay** fit. Each sensor is calibrated to ground truth with a polynomial model (_y = β₂V² + β₁V + β₀_; piezo and ultrasonic needed the quadratic term, optical and tribo were linear). Ground truth comes from a load-cell mass scale, differentiated to a reference flow rate; a cross-correlation step removes pneumatic transport lag before fitting. A separate harmonic-fit SNR metric quantifies how well each sensor resolves the periodic hopper surge.
 
 ---
 
 ## Results
 
-- **Three sensors each achieve R² > 0.9 and NRMSE 4–6%** across a 0.4–11 g/min operating range
-- **Piezoelectric matches ultrasonic-level accuracy at 90× lower data rate and ~200× lower cost**
-- **Optical reflectance resolves fine flow oscillations** invisible to lower-SNR sensors
-- Together the three form a complementary suite: from low-cost fault monitoring (piezo) to control-ready high-fidelity measurement (optical)
+- **All four modalities track average flow comparably:** NRMSE 3.70–6.01%, MAPE 5.92–8.65% across 0.4–11 g/min
+- **Piezoelectric delivers ultrasonic-level accuracy for $5** at a 90× lower data rate — ideal for low-cost distributed monitoring
+- **Optical wins on fidelity:** highest SNR, resolving fine oscillatory flow structure no other sensor could
+- Together they span the design space from **low-cost fault monitoring (piezo/tribo)** to **control-ready high-fidelity sensing (optical)**, motivating multi-modal sensor fusion
 
----
-
-## Tools
-
-`Python` · `NumPy` · `SciPy` · `LabVIEW` · `Analog Discovery Pro 3450` · `Savitzky–Golay` · `Polynomial Regression` · `Causal Signal Processing`
-
-_Stebner Lab, Georgia Tech · Manuscript in preparation_
+_First-author manuscript (Conceptualization, Methodology, Software, Analysis) — Stebner Lab, Georgia Tech. Supported by NSF-GRFP and Georgia AIM._
 
 ---
 
 ## Addendum: Kalman Filter Sensor Fusion
 
-With multiple in-line sensors measuring the same flow, a natural next step is fusing them to improve estimation accuracy. A follow-on project built a **Kalman filter** (not an EKF — the system dynamics are linear; the nonlinearity enters only through the sensor calibration model) that fuses the **piezoelectric** and **triboelectric** sensors to produce a single flow-rate estimate.
+The manuscript's natural next step — fusing multiple sensors for a more robust flow estimate — was realized in a follow-on project: a **Kalman filter** (a standard linear KF, **not** an EKF — the state dynamics are linear, and the only nonlinearity lives in the sensor calibration, which is handled by state augmentation) that fuses the **piezoelectric** and **triboelectric** sensors into a single flow-rate estimate.
 
 <div class="row mb-4">
   <div class="col-sm-12">
@@ -94,17 +87,17 @@ With multiple in-line sensors measuring the same flow, a natural next step is fu
   </div>
 </div>
 
-Two filter designs were compared:
+Two designs were compared:
 
 | Model             | States          | Calibration              | MSE (g/s)     |
 | ----------------- | --------------- | ------------------------ | ------------- |
 | Linear KF         | 3 (ṁ², ṁ, bias) | Global quadratic         | **3.89×10⁻⁵** |
 | Gain-scheduled KF | 2 (ṁ, bias)     | Piecewise linear per bin | 6.59×10⁻⁵     |
 
-**Linear KF:** The quadratic sensor calibration is linearized by augmenting the state with ṁ² and a constant bias term, keeping the filter structure fully linear. Measurement noise **R** is populated directly from calibration residual variances — no hand-tuning required.
+**Linear KF:** The quadratic sensor calibration is absorbed by augmenting the state with ṁ² and a constant bias term, keeping the filter fully linear. Measurement noise **R** is populated directly from calibration residual variances — no hand-tuning.
 
-**Gain-scheduled KF:** Splits the flow range into bins and fits a separate linear calibration in each; **H** and **R** switch automatically at bin boundaries. Lower raw MSE is outweighed by a residual bias that would require an integral term in a control loop — the linear KF is a better drop-in for the MRAC controller.
+**Gain-scheduled KF:** Splits the flow range into bins with a separate linear calibration in each; **H** and **R** switch automatically at bin boundaries.
 
-**Key finding:** The linear KF achieves the lower MSE (3.89×10⁻⁵ vs. 6.59×10⁻⁵ g/s), while the gain-scheduled KF has zero residual bias, making it preferable for a downstream control loop. The framework scales naturally to 4 sensors (adding acoustic and capacitive modalities) for multi-material flow estimation.
+**Key finding:** The linear KF achieves the lower MSE (3.89×10⁻⁵ vs. 6.59×10⁻⁵ g/s), while the gain-scheduled KF has zero residual bias — preferable for a downstream control loop that would otherwise need an integral term. The framework scales to four sensors (adding acoustic and capacitive modalities) for multi-material flow estimation.
 
 _AE 6505: Kalman Filtering — Georgia Tech · Stebner Lab_
