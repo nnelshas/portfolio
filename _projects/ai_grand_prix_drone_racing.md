@@ -21,7 +21,7 @@ category: research
 
 ## Overview
 
-A complete perception-and-control autonomy stack for **high-speed FPV drone racing** in the AI Grand Prix simulator. The quadcopter flies aggressive, agile trajectories through a sequence of gates with no prior map — it must **see** each gate, **estimate where it is**, and **track an aggressive trajectory** to fly through it, all in real time.
+A complete perception-and-control stack for **high-speed FPV drone racing** in the AI Grand Prix simulator. With no map of the course, the drone has to **spot** each gate, **work out where it is**, and **fly an aggressive path** through it — all in real time.
 
 The stack has three tightly coupled pieces:
 
@@ -50,22 +50,22 @@ The stack has three tightly coupled pieces:
 
 ## SO(3) Geometric Controller
 
-- **Configuration-space control:** Attitude is tracked directly on the rotation group **SO(3)**, avoiding the singularities and unwinding of Euler-angle controllers — essential for the large bank/pitch angles seen in racing.
-- **Geometric tracking law:** Computes attitude and angular-velocity errors intrinsically on the manifold, producing thrust and moment commands that hold up under near-aerobatic maneuvers.
-- **High-speed agility:** Tuned for aggressive, time-optimal trajectories between gates rather than gentle hover-to-hover motion.
-- **Cascaded structure:** An outer position/velocity loop produces the desired thrust direction; the inner SO(3) attitude loop drives the body frame to match it.
+- **Control on the rotation manifold:** Tracks orientation directly on the rotation group **SO(3)**, avoiding the gimbal-lock and wind-up problems of Euler-angle controllers — which matters at the steep bank and pitch angles of racing.
+- **Geometric tracking law:** Measures orientation and angular-velocity error on the manifold itself, producing thrust and torque commands that stay valid through near-aerobatic maneuvers.
+- **High-speed agility:** Tuned for fast, time-optimal paths between gates, not gentle hover-to-hover moves.
+- **Cascaded design:** An outer position/velocity loop sets the desired thrust direction; the inner SO(3) attitude loop rotates the drone to match it.
 
 ## One-Shot Gate Detection
 
-- **Single forward pass per frame:** A one-shot computer-vision detector localizes racing gates directly in the onboard FPV image — no multi-stage proposal pipeline — keeping latency low enough for high-speed flight.
-- **Robust to motion:** Detects gates under motion blur, perspective distortion, and partial visibility as the drone banks and rolls through the course.
-- **Feeds the estimator:** Each detection becomes a measurement of where the next gate appears in the image, which the filter fuses into a metric position estimate.
+- **One pass per frame:** A single-shot detector finds gates directly in the onboard camera image — no slow multi-stage pipeline — keeping latency low enough for high-speed flight.
+- **Robust to motion:** Still finds gates through motion blur, skewed perspective, and partial views as the drone banks and rolls through the course.
+- **Feeds the estimator:** Each detection is a measurement of where the next gate sits in the image, which the filter turns into a real-world position.
 
 ## Kalman Filter Gate Localization
 
-- **Estimates gate poses on the fly:** A Kalman filter fuses successive one-shot detections with the drone's own motion to recover each gate's 3-D position — the course is discovered in flight, not handed in advance.
-- **Noise-aware fusion:** Treats each detection as a noisy bearing/position measurement, smoothing jittery per-frame detections into a stable target the controller can aim for.
-- **Closes the loop:** The filtered gate estimate becomes the reference for the trajectory and SO(3) controller, so perception error and control are coupled through one consistent state estimate.
+- **Locates gates on the fly:** A Kalman filter combines successive detections with the drone's own motion to recover each gate's 3-D position — the course is discovered mid-flight, not given in advance.
+- **Noise-aware fusion:** Treats each detection as a noisy measurement, smoothing jittery per-frame readings into a stable target the controller can aim for.
+- **Closes the loop:** The filtered gate estimate becomes the target for the trajectory and SO(3) controller, tying perception and control together through one consistent estimate.
 
 ---
 

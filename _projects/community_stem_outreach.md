@@ -8,9 +8,10 @@ category: service
 ---
 
 ## Summary
-- Building STEM enrichment content and collaborating with community partners to support underserved students.
+
+- Building STEM enrichment content with community partners to support underserved students in Atlanta.
 
 ## Highlights
-- Collaborating with Atlanta Mission Women’s Shelter to develop STEM enrichment courses for unhoused children.
-- Partnered with Agape community outreach to develop math skills in underserved K-12 students.
 
+- Developing STEM enrichment courses for unhoused children with the **Atlanta Mission Women’s Shelter**.
+- Building math skills with underserved K–12 students through **Agape Community Outreach**.

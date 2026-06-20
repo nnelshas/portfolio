@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Research projects spanning sensor fusion, state estimation, deep RL, and vision-language action models. Hover over cards to preview demos.
+description: Research projects in sensor fusion, state estimation, reinforcement learning, and vision-language robot models. Hover over a card to preview its demo.
 nav: false
 display_categories: [research, service]
 horizontal: false

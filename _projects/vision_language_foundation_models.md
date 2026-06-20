@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Vision-Language Action Models
-description: Bayesian UQ + dynamic action allocation for OpenVLA-OFT — 99.2% success on LIBERO benchmark.
+description: Bayesian uncertainty estimates and smart action reuse for the OpenVLA robot model — 99.2% success on the LIBERO benchmark.
 img: assets/img/proj_vla_thumb.jpg
 hover_video: assets/video/vla_success.mp4
 importance: 2
@@ -10,14 +10,14 @@ category: research
 
 <div class="row mb-4">
   <div class="col-sm-6">
-    <h3><i class="fa-solid fa-circle-check" style="color: #28a745;"></i> Success — With Dynamic Action Arch.</h3>
+    <h3><i class="fa-solid fa-circle-check" style="color: #28a745;"></i> Success — with dynamic action architecture</h3>
     <video width="100%" controls autoplay muted loop playsinline style="border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
       <source src="{{ '/assets/video/vla_success.mp4' | relative_url }}" type="video/mp4">
     </video>
     <p style="color: #28a745; font-weight: bold; margin-top: 6px;">&#10003; Episode 43 — Task Completed</p>
   </div>
   <div class="col-sm-6">
-    <h3><i class="fa-solid fa-circle-xmark" style="color: #dc3545;"></i> Failure — Without Dynamic Action Arch.</h3>
+    <h3><i class="fa-solid fa-circle-xmark" style="color: #dc3545;"></i> Failure — without dynamic action architecture</h3>
     <video width="100%" controls autoplay muted loop playsinline style="border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
       <source src="{{ '/assets/video/vla_failure.mp4' | relative_url }}" type="video/mp4">
     </video>
@@ -54,24 +54,24 @@ category: research
 
 ## Uncertainty Quantification
 
-- **Bayesian LoRA** — adapter weights as distributions, not point estimates
-- **Laplace approximation** — post-hoc posterior calibration; no retraining
-- **Per-action confidence score** — calibrated uncertainty at inference time
-- **OOD detection** — flags novel states before failure propagates
+- **Bayesian LoRA** — treats the fine-tuned weights as distributions, not single values, so the model can tell when it's unsure
+- **Laplace approximation** — adds this calibration after training, with no retraining needed
+- **Per-action confidence score** — a calibrated uncertainty value for every action the robot takes
+- **Out-of-distribution detection** — flags unfamiliar situations before they cause a failure
 
 ## Dynamic Action Architecture
 
-- **High confidence → open-loop replay** — skip forward pass, reuse cached actions
-- **Low confidence → fresh inference** — query model for new action
-- **~2× effective control frequency** — no accuracy loss
-- **Eliminates latency bottleneck** — critical for real-time deployment
+- **Confident → reuse** — skip the expensive model call and replay cached actions
+- **Unsure → recompute** — query the model for a fresh action
+- **~2× faster control loop** — with no loss in accuracy
+- **Removes the latency bottleneck** — the key to running on a real robot
 
 ## Experimental Setup
 
-- **Benchmark:** LIBERO robot manipulation suite (diverse tabletop tasks)
-- **Model:** OpenVLA-OFT fine-tuned via Optimized Fine-Tuning (OFT)
-- **Hardest task:** Moka pot stacking (shown above) — highest OOD exposure
-- **Baseline:** Standard OFT without dynamic architecture → frequent failures
+- **Benchmark:** LIBERO robot manipulation suite (varied tabletop tasks)
+- **Model:** OpenVLA fine-tuned with Optimized Fine-Tuning (OFT)
+- **Hardest task:** Moka-pot stacking (shown above) — the most unfamiliar situations
+- **Baseline:** plain OFT without the dynamic architecture → frequent failures
 
 ---
 

@@ -60,7 +60,9 @@ ul.task-list input[type="checkbox"] {
 
   img {
     will-change: transform;
-    transition: transform 220ms ease, box-shadow 220ms ease;
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease;
     transform-origin: center;
   }
 

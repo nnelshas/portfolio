@@ -6,12 +6,12 @@ cv:
   location: Atlanta, GA
   image: assets/img/meLinked.jpg
   summary: >
-    NSF-GRFP Fellow (2024) and Robotics PhD candidate at Georgia Tech (expected May 2027) specializing in
-    multi-physics sensor fusion, adaptive control (MRAC + Lyapunov), and learning-based systems for
-    highly dynamic, real-world applications. Research spans the full autonomy stack — from system
-    identification and provably-stable adaptive control to VLA foundation models — with a consistent
-    focus on hardware-validated results. Actively seeking robotics engineering roles in perception,
-    state estimation, and intelligent control.
+    NSF-GRFP Fellow (2024) and Robotics PhD candidate at Georgia Tech (graduating May 2027). I build
+    sensing and control systems for fast, unpredictable hardware, combining multi-sensor fusion,
+    self-tuning adaptive control (Lyapunov-based MRAC), and machine learning. My work spans the full
+    autonomy stack — from sensor design and provably-stable control to vision-language robot models —
+    with a consistent focus on results validated on real hardware. Seeking robotics engineering roles
+    in perception, state estimation, and intelligent control.
 
   social_networks:
     - network: GitHub

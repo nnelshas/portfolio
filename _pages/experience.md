@@ -19,11 +19,11 @@ nav: false
       <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot"></i> Atlanta, GA &nbsp;·&nbsp; Jan 2022 – Present</p>
       <p class="mb-2"><strong>Thesis:</strong> <em>Multi-material Mass Flow Monitoring and Control for Powder-Blown Directed Energy Deposition</em> &nbsp;·&nbsp; Advisor: Dr. Aaron Stebner</p>
       <ul>
-        <li>Developed <strong>MRAC with Lyapunov-stable parameter adaptation</strong> for feedforward control of a nonlinear powder transport system with 10–60s delays; derived adaptation laws from first principles; <strong>70% fluctuation mitigation</strong> achieved in preliminary FPGA-deployed implementation.</li>
-        <li>Designed a <strong>nonlinear Kalman filter (EKF/UKF)</strong> for real-time multi-physics sensor fusion and state estimation on a high-speed physical testbed — sub-millisecond cycle times, robust to sensor dropout.</li>
-        <li>Designed a <strong>3-sensor array</strong> (piezoelectric, triboelectric, optical) for in-line PB-DED mass flow monitoring — validated against precision mass scale ground truth, <strong>5 patents pending</strong>.</li>
-        <li>Deployed a <strong>Deep RL (PPO) agent</strong> for robust feed-forward control of a nonlinear high-delay plant; 3× reduction in tracking error vs. classical baselines; zero-shot sim-to-real transfer.</li>
-        <li>Manages the Rapid Prototyping and Electronics Lab; <strong>trained 55 undergraduates</strong>, directly mentored 4 graduate researchers.</li>
+        <li>Built a <strong>self-tuning adaptive controller</strong> (Lyapunov-based MRAC) for a nonlinear powder-transport system with 10–60s delays, deriving the math from first principles for guaranteed stability; a preliminary FPGA implementation <strong>cut flow fluctuations by 70%</strong>.</li>
+        <li>Designed a <strong>nonlinear Kalman filter (EKF/UKF)</strong> that fuses several sensors into one real-time state estimate on a high-speed testbed — sub-millisecond updates, resilient when a sensor drops out.</li>
+        <li>Designed a <strong>3-sensor array</strong> (piezoelectric, triboelectric, optical) that measures powder flow rate inside a metal 3D printer in real time, validated against a precision scale — <strong>5 patents pending</strong>.</li>
+        <li>Trained a <strong>deep reinforcement learning (PPO) controller</strong> for the same high-delay system: <strong>3× lower tracking error</strong> than classical baselines, transferring from simulation to hardware with no retuning.</li>
+        <li>Run the Rapid Prototyping and Electronics Lab; <strong>trained 55 undergraduates</strong> and mentored 4 graduate researchers.</li>
       </ul>
       <div class="mt-2 flex-wrap">
         {% for tag in "MRAC,Lyapunov Adaptation,Kalman Filtering,Deep RL,Sensor Fusion,FPGA,LabVIEW,Python,C++,ROS2" | split: "," %}
@@ -51,9 +51,9 @@ nav: false
       <h5 style="color: var(--global-theme-color);">Los Alamos National Laboratory (LANL)</h5>
       <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot"></i> Los Alamos, NM &nbsp;·&nbsp; May 2022 – Present</p>
       <ul>
-        <li><strong>Invented</strong> a deformable convolution workflow for wavenumber estimation and anomaly detection on curved 3D geometries — novel technique, <strong>patent pending (LANL)</strong>. Manuscript targeting <em>MSSP 2026</em>.</li>
-        <li>Developed rigorous <strong>theoretical UQ framework</strong> for full-field ultrasonic inspection pipelines; published at <em>IWSHM 2023</em>, presented at <em>AIVELA 2025</em>.</li>
-        <li>Engineered fully <strong>automated 3D point cloud registration pipeline</strong> (FPFH + RANSAC + ICP + pose graph) using Open3D for arbitrary multi-scan LiDAR data at scale.</li>
+        <li><strong>Invented</strong> a method that lets an inspection algorithm follow curved 3D surfaces (deformable convolution) to map thickness and flag defects where standard flat-grid methods break down — <strong>patent pending (LANL)</strong>; manuscript targeting <em>MSSP 2026</em>.</li>
+        <li>Built a <strong>framework for quantifying uncertainty</strong> in full-field ultrasonic inspection, so each thickness reading comes with error bars; published at <em>IWSHM 2023</em>, presented at <em>AIVELA 2025</em>.</li>
+        <li>Engineered a fully <strong>automated pipeline that stitches many LiDAR scans into one 3D model</strong> (FPFH → RANSAC → ICP → pose-graph optimization, in Open3D) — no manual alignment, and it scales to large scan sets.</li>
       </ul>
       <div class="mt-2">
         {% for tag in "Open3D,Point Cloud,Deformable Convolution,UQ,Signal Processing,Python,MATLAB" | split: "," %}
@@ -84,10 +84,10 @@ nav: false
       <h5 style="color: var(--global-theme-color);">VitalEyes</h5>
       <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot"></i> Atlanta, GA &nbsp;·&nbsp; May 2020 – April 2021</p>
       <ul>
-        <li>Co-founded a computer-vision startup enabling <strong>real-time occupancy monitoring</strong> to enforce social distancing in research facilities.</li>
+        <li>Co-founded a computer-vision startup for <strong>real-time occupancy monitoring</strong>, helping research facilities enforce social distancing.</li>
         <li>Led full-stack development; <strong>deployed to 5 GT labs with 30+ researchers</strong> within 3 months of launch.</li>
-        <li>Conducted customer discovery with academic and industry stakeholders; iterated product based on feedback.</li>
-        <li>Managed codebase architecture, CI/CD pipeline, and rigorous unit testing workflows.</li>
+        <li>Ran customer discovery with academic and industry users and iterated the product on their feedback.</li>
+        <li>Owned the codebase architecture, CI/CD pipeline, and testing workflow.</li>
       </ul>
       <div class="mt-2">
         {% for tag in "Computer Vision,Full-Stack,Product Leadership,Customer Discovery,Startup" | split: "," %}
@@ -113,7 +113,7 @@ nav: false
   <div class="row">
     <div class="col-sm-4">
       <h5><i class="fa-solid fa-chalkboard-user" style="color: var(--global-theme-color);"></i> Lab Management</h5>
-      <p class="small">Manage Georgia Tech's Rapid Prototyping and Electronics Lab. Trained <strong>55+ undergraduates</strong> in embedded systems, electronics, and rapid prototyping. Directly mentored 4 graduate researchers on research methodology and technical execution.</p>
+      <p class="small">Manage Georgia Tech's Rapid Prototyping and Electronics Lab. Trained <strong>55+ undergraduates</strong> in embedded systems, electronics, and prototyping, and mentored 4 graduate researchers on research methods and execution.</p>
     </div>
     <div class="col-sm-4">
       <h5><i class="fa-solid fa-people-group" style="color: var(--global-theme-color);"></i> STEM Outreach</h5>
@@ -145,6 +145,7 @@ nav: false
       <h6 class="mt-3"><i class="fa-solid fa-microchip" style="color: var(--global-theme-color);"></i> Hardware & Sensing</h6>
       <p class="small">Real-Time Embedded Control (FPGA), High-Speed DAQ (&gt;1 kHz), Fiber-Optic Sensing, Mechatronics, Rapid Prototyping, Point Cloud Processing (Open3D), LiDAR</p>
     </div>
+
   </div>
 </div>
 

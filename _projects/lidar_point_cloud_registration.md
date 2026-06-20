@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Automated 3D Point Cloud Registration
-description: FPFH + RANSAC + ICP + pose graph pipeline for multi-scan LiDAR registration at LANL — fully automated, no manual alignment.
+description: An automated pipeline that aligns and merges many LiDAR scans into one 3-D model — no manual alignment (FPFH → RANSAC → ICP → pose-graph).
 img: assets/img/proj_pointcloud.jpg
 importance: 6
 category: research
@@ -48,26 +48,26 @@ category: research
 
 ### Coarse Alignment — FPFH + RANSAC
 
-- **FPFH descriptors** capture local 3D geometry per point
-- **RANSAC** finds robust cross-scan correspondences
-- **Works with low overlap** and symmetric geometries
+- **FPFH descriptors** summarize the local 3D shape around each point
+- **RANSAC** matches points across scans while rejecting bad matches
+- **Works even with low overlap** and symmetric shapes
 
 ### Fine Alignment — ICP
 
-- **Point-to-plane ICP** for high-precision refinement
-- **Colored ICP** for partial overlap / non-rigid distortions
-- **Jointly optimizes** geometry + intensity
+- **Point-to-plane ICP** refines the alignment to high precision
+- **Colored ICP** handles partial overlap and slight distortions
+- **Uses both shape and color** together
 
 ### Global Consistency — Pose Graph
 
-- **Nodes:** scan poses; **edges:** pairwise registration transforms
-- **Global optimization** minimizes accumulated drift
-- **Loop closure** for drift-free multi-scan reconstruction
+- **Nodes** = scan positions, **edges** = pairwise alignments
+- **Global optimization** removes accumulated drift
+- **Loop closure** keeps the full reconstruction consistent
 
 ### Automation
 
-- **Zero manual steps** — scan ordering and strategy fully automated
-- **Quality-based failure detection** — re-estimates or omits bad scans
+- **Zero manual steps** — scan ordering and strategy are fully automated
+- **Catches bad scans** automatically and re-aligns or drops them
 - **Scales to 100+ scans** via hierarchical merging
 
 ---

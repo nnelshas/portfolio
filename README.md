@@ -14,6 +14,7 @@ bundle exec jekyll build           # build to _site/ (don't edit _site/ directly
 ```
 
 Docker alternative (recommended):
+
 ```bash
 docker compose up                  # runs at http://localhost:8080
 ```
@@ -23,12 +24,15 @@ docker compose up                  # runs at http://localhost:8080
 ## How to Edit Common Things
 
 ### Update Your Bio
+
 Edit `_pages/about.md`. YAML front matter controls the sidebar; the body below `---` is Markdown.
 
 ### Update Your Resume PDF
+
 Replace `assets/pdf/resume.pdf`. The `/resume/` page auto-links to it.
 
 ### Update Work Experience / CV Data
+
 **All structured CV data lives in `_data/cv.yml`** — this is the single source of truth for the /resume/ page.
 
 ```yaml
@@ -42,22 +46,27 @@ Experience:
 ```
 
 ### Add a New Project Card
+
 Create `_projects/your_project.md`:
+
 ```markdown
 ---
 layout: page
 title: Project Title
 description: One-line card description.
-img: assets/img/thumbnail.jpg   # 800×600px recommended
-hover_video: assets/video/demo.mp4  # optional — plays on hover
-importance: 3                   # lower = shown first
-category: research              # or "service"
+img: assets/img/thumbnail.jpg # 800×600px recommended
+hover_video: assets/video/demo.mp4 # optional — plays on hover
+importance: 3 # lower = shown first
+category: research # or "service"
 ---
+
 Content in Markdown here...
 ```
 
 ### Add Publications (BibTeX)
+
 Edit `_bibliography/papers.bib`. Key custom fields:
+
 ```bibtex
 preview      = {thumbnail.jpg}           % in assets/img/publication_preview/
 preview_video = {assets/video/demo.mp4}  % plays on preview hover
@@ -66,17 +75,19 @@ selected     = {true}                    % appears on about page
 ```
 
 ### Change Nav Order
+
 Edit `nav_order:` in each `_pages/*.md` file. Current order:
 
-| Order | Page | File |
-|-------|------|------|
-| 2 | publications | publications.md |
-| 3 | projects | projects.md |
-| 4 | experience | experience.md |
-| 5 | resume | cv.md |
-| 6 | repositories | repositories.md |
+| Order | Page         | File            |
+| ----- | ------------ | --------------- |
+| 2     | publications | publications.md |
+| 3     | projects     | projects.md     |
+| 4     | experience   | experience.md   |
+| 5     | resume       | cv.md           |
+| 6     | repositories | repositories.md |
 
 ### Add Hover Videos
+
 1. Copy `.mp4` to `assets/video/`
 2. Add `hover_video: assets/video/filename.mp4` to project frontmatter
 3. For publications: add `preview_video = {assets/video/filename.mp4}` to BibTeX entry
@@ -151,7 +162,7 @@ Status: https://github.com/nnelshas/portfolio/actions
 
 ---
 
-*Built on [al-folio](https://github.com/alshedivat/al-folio). Last major overhaul: March 2026.*
+_Built on [al-folio](https://github.com/alshedivat/al-folio). Last major overhaul: March 2026._
 
 ---
 

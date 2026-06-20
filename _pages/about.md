@@ -28,7 +28,7 @@ latest_posts:
   enabled: false
 ---
 
-I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow, expected May 2027) building **real-time sensing and control for highly dynamic, uncertain physical systems** — at the intersection of **rigorous control theory, hardware-grounded sensing, and learning**. My thesis fuses multi-physics sensing, provably-stable adaptive control, and ML for metal additive manufacturing; in parallel I work with **Los Alamos National Laboratory** on perception and inspection for autonomous NDE. I’m most excited by high-stakes deployment problems — autonomous vehicles, inspection robotics, and manufacturing automation.
+I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow, graduating May 2027). I build **sensing and control systems that run in real time on fast, unpredictable hardware** — combining control theory, physical sensors, and machine learning. My thesis brings all three together to monitor and steer metal 3D printing as it happens; separately, I work with **Los Alamos National Laboratory** on perception for robots that inspect structures for hidden damage. I’m drawn to problems where getting it right actually matters — self-driving cars, inspection robotics, and manufacturing automation.
 
 ---
 
@@ -38,19 +38,19 @@ I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow, expected Ma
   <div class="col-sm-4">
     <div class="card p-3 h-100" style="border-top: 3px solid var(--global-theme-color);">
       <h6><strong><i class="fa-solid fa-wave-square"></i> Adaptive Control</strong></h6>
-      <p class="small mb-0">MRAC with <strong>Lyapunov-stable parameter adaptation</strong> for feedforward control of nonlinear systems with large delays. Derived from first principles — stability guaranteed.</p>
+      <p class="small mb-0">Controllers that <strong>tune themselves online</strong> to steer nonlinear systems with long delays — with stability proven mathematically (Lyapunov-based MRAC), not just tuned by hand.</p>
     </div>
   </div>
   <div class="col-sm-4">
     <div class="card p-3 h-100" style="border-top: 3px solid var(--global-theme-color);">
       <h6><strong><i class="fa-solid fa-satellite-dish"></i> Multi-Physics Sensing</strong></h6>
-      <p class="small mb-0">Designed 3 novel in-line sensors (piezoelectric, triboelectric, optical) with <strong>Bayesian fusion</strong> for robust state estimation under noise and disturbances.</p>
+      <p class="small mb-0">Three custom sensors (piezoelectric, triboelectric, optical) whose readings are <strong>fused statistically</strong> into one reliable measurement that holds up under heavy noise.</p>
     </div>
   </div>
   <div class="col-sm-4">
     <div class="card p-3 h-100" style="border-top: 3px solid var(--global-theme-color);">
       <h6><strong><i class="fa-solid fa-brain"></i> Learning-Based Systems</strong></h6>
-      <p class="small mb-0">VLA foundation model UQ (99.2% on LIBERO), deep RL for nonlinear control, PLSR multi-material sensing, and sensor distillation via <strong>cross-modal knowledge transfer</strong>.</p>
+      <p class="small mb-0">Uncertainty estimates for robot foundation models (99.2% on the LIBERO benchmark), deep reinforcement learning for control, and <strong>teaching cheap sensors to imitate expensive ones</strong> via cross-modal knowledge transfer.</p>
     </div>
   </div>
 </div>
