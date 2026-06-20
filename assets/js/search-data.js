@@ -23,29 +23,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/portfolio/resume/";
           },
-        },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
-        
-          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
-          
-        },
-      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
-        
-          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
-          
-        },
-      },{id: "books-the-godfather",
+        },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
@@ -61,8 +39,8 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-ai-grand-prix-autonomous-drone-racing",
-          title: 'AI Grand Prix — Autonomous Drone Racing',
+          section: "News",},{id: "projects-autonomous-fpv-drone-racing",
+          title: 'Autonomous FPV Drone Racing',
           description: "SO(3) geometric control, one-shot gate detection, and a Kalman filter for on-the-fly gate localization — a full autonomy stack for high-speed FPV drone racing.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/ai_grand_prix_drone_racing/";
@@ -78,7 +56,7 @@ ninja.data = [{
               window.location.href = "/portfolio/projects/deformable_convolution_nde/";
             },},{id: "projects-kalman-filter-sensor-fusion-for-ded-mass-flow",
           title: 'Kalman Filter Sensor Fusion for DED Mass Flow',
-          description: "EKF with gain-scheduled nonlinear calibration fusing piezoelectric and triboelectric sensors for real-time mass flow estimation in PB-DED.",
+          description: "Heterogeneous KF fusing piezoelectric and triboelectric sensors with gain-scheduled nonlinear calibration for real-time mass flow estimation in PB-DED — MSE 3.89×10⁻⁵ g/s.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/kalman_filtering_ded/";
             },},{id: "projects-automated-3d-point-cloud-registration",
