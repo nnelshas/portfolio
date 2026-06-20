@@ -194,29 +194,17 @@ ul.task-list input[type="checkbox"] {
   aspect-ratio: 16 / 9;
   background: #000;
 
-  // figure.liquid wraps the thumbnail in <figure><picture><img>; flatten it
+  // figure.liquid wraps the thumbnail in <figure><picture><img>; flatten the
+  // wrappers and let the <img> itself set the height.
   figure,
   picture {
     display: block;
-    height: 100%;
     margin: 0;
   }
 
-  // Static thumbnail (no hover video): absolutely fills the 16:9 wrapper.
+  // Static thumbnail (cards without a hover video). In-flow image with a
+  // fixed ratio so the card reserves the correct height immediately.
   .project-thumbnail {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
-  }
-
-  // Poster image for hover-video cards: stays IN FLOW so it actually
-  // establishes the wrapper's height (absolutely-positioned-only children
-  // give the wrapper zero height inside Bootstrap's flex card, defeating
-  // the aspect-ratio rule). The video then layers on top absolutely.
-  .project-poster {
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -224,9 +212,26 @@ ul.task-list input[type="checkbox"] {
     margin: 0;
   }
 
+  // Poster for hover-video cards. position:relative keeps it IN FLOW so it
+  // establishes the wrapper's 16:9 height, while z-index lifts it ABOVE the
+  // absolutely-positioned video — otherwise the (empty, unloaded) video
+  // would paint over the poster and the card wouldn't show its starting
+  // frame on load. It fades out on hover to reveal the playing video.
+  .project-poster {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin: 0;
+    transition: opacity 250ms ease;
+  }
+
   .project-card-video {
     position: absolute;
     inset: 0;
+    z-index: 1;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -262,6 +267,11 @@ ul.task-list input[type="checkbox"] {
 
 .project-card:hover {
   .project-media-wrapper {
+    // Reveal the playing video by fading the poster that sits over it.
+    .project-poster {
+      opacity: 0;
+    }
+
     .project-video-badge {
       opacity: 1;
       background: var(--global-theme-color);
