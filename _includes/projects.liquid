@@ -4,10 +4,17 @@
       {% if project.img or project.hover_video %}
         <div class="project-media-wrapper">
           {% if project.hover_video %}
+            {% if project.img %}
+              <img
+                class="project-thumbnail"
+                src="{{ project.img | relative_url }}"
+                alt="project thumbnail"
+                loading="eager"
+              >
+            {% endif %}
             <video
               class="project-card-video"
               src="{{ project.hover_video | relative_url }}"
-              poster="{{ project.img | relative_url }}"
               muted
               loop
               playsinline
