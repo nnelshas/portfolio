@@ -76,7 +76,7 @@ _First-author manuscript (Conceptualization, Methodology, Software, Analysis) �
 
 ## Addendum: Kalman Filter Sensor Fusion
 
-The manuscript's natural next step — fusing multiple sensors for a more robust flow estimate — was realized in a follow-on project: a **Kalman filter** (a standard linear KF, **not** an EKF — the state dynamics are linear, and the only nonlinearity lives in the sensor calibration, which is handled by state augmentation) that fuses the **piezoelectric** and **triboelectric** sensors into a single flow-rate estimate.
+The manuscript's natural next step — fusing multiple sensors for a more robust flow estimate — was realized in a follow-on project: a **linear Kalman filter** that fuses the **piezoelectric** and **triboelectric** sensors into a single flow-rate estimate.
 
 <div class="row mb-4">
   <div class="col-sm-12">
