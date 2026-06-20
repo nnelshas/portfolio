@@ -52,11 +52,11 @@ category: research
 
 ---
 
-## The Problem: Action Chunking Isn't Free
+## The Problem: The Cost of Action Chunking
 
-Autoregressive VLA models like **OpenVLA** generate one action per forward pass, running at only 3–5 Hz — far too slow for the 25–50+ Hz needed for real robot control. **OpenVLA-OFT** speeds this up with **parallel decoding and action chunking**: the model predicts _K_ actions in a single pass and executes them open-loop, cutting forward passes by a factor of _K_.
+Autoregressive VLA models like **OpenVLA** generate one action per forward pass, running at only 3–5 Hz — far too slow for the 25–50+ Hz needed for real robot control. **OpenVLA-OFT** addresses this with **parallel decoding and action chunking**: the model predicts _K_ actions in a single pass and executes them open-loop, cutting forward passes by a factor of _K_.
 
-But chunking is not a free lunch. Executing a long chunk without fresh feedback lets prediction error **compound** — and the model always emits a fixed number of actions regardless of how hard the moment is. Our experiments confirm the tradeoff: training on chunk size 24 but executing **all 24** actions scores only **97.6%**, because the low-confidence tail of each chunk accumulates error.
+But chunking has a cost. Executing a long chunk without fresh feedback lets prediction error **compound**, and the model emits a fixed number of actions regardless of task difficulty. Our experiments confirm the tradeoff: training on chunk size 24 but executing **all 24** actions scores only **97.6%**, because the low-confidence tail of each chunk accumulates error.
 
 ---
 
@@ -79,9 +79,9 @@ Rather than commit to a fixed chunk size, we let the model **decide on the fly h
 | **24**         | **top 12**       | **0.992**    |
 | 8              | all 8            | 0.984        |
 
-- **Predict long, execute short:** Training on 24-action chunks but executing only the most confident **12** gives the best result in the study — **99.2%**, beating full-chunk execution.
-- **Short chunks compete at ~2× speed:** Training/executing 8 actions matches the 24-train/16-execute setting at roughly half the model calls — attractive for real-time deployment.
-- **Over-truncation backfires:** Cutting below ~8 executed actions starts to lower success, since the robot loses the coverage it needs to finish the task.
+- **Predict long, execute short:** Training on 24-action chunks but executing only the most confident **12** gives the best result in the study — **99.2%**, exceeding full-chunk execution.
+- **Short chunks compete at ~2× speed:** Training and executing 8 actions matches the 24-train/16-execute setting at roughly half the model calls — attractive for real-time deployment.
+- **Over-truncation hurts:** Cutting below ~8 executed actions begins to lower success, since the robot loses the coverage it needs to complete the task.
 
 ---
 

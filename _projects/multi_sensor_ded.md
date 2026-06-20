@@ -22,7 +22,7 @@ category: research
 
 Powder-blown directed energy deposition (PB-DED) pneumatically conveys metal powder into a laser melt pool to build parts layer by layer. A stable, well-characterized powder mass-flow rate is essential for part quality — yet commercial systems still have **no real-time in-line measurement**. This work designs, builds, and benchmarks **three novel in-line mass-flow sensors** against an ultrasonic baseline (replicated from Whiting et al.) on a common platform, all calibrated against the same mass-scale reference over a **0.4–11 g/min** range using **strictly causal** pipelines suitable for real-time control.
 
-The headline result: each novel sensor matches ultrasonic-level average-flow accuracy (**R² > 0.9**) while sampling at a **90× lower digitized data rate** (22.2 kHz vs. 2,000 kHz). There is no single "best" sensor — each occupies a different point in the cost / fidelity / latency design space.
+The key result: each novel sensor matches ultrasonic-level average-flow accuracy (**R² > 0.9**) while sampling at a **90× lower digitized data rate** (22.2 kHz vs. 2,000 kHz). There is no single best sensor — each occupies a distinct point in the cost / fidelity / latency design space.
 
 | Sensor                | Cost   | Data rate | R²    | NRMSE | Resolves oscillations? |
 | --------------------- | ------ | --------- | ----- | ----- | ---------------------- |

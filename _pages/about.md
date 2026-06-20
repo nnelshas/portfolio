@@ -27,7 +27,7 @@ latest_posts:
   enabled: false
 ---
 
-I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow, graduating May 2027). I build **sensing and control systems that run in real time on fast, unpredictable hardware** — combining control theory, physical sensors, and machine learning. My thesis brings all three together to monitor and steer metal 3D printing as it happens; separately, I work with **Los Alamos National Laboratory** on perception for robots that inspect structures for hidden damage. I’m drawn to problems where getting it right actually matters — self-driving cars, inspection robotics, and manufacturing automation.
+I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow, graduating May 2027). I build **real-time sensing and control systems for noisy, fast-moving hardware**, combining control theory, physical sensors, and machine learning. My thesis unites all three to monitor and control metal 3D printing as it happens; in parallel, I work with **Los Alamos National Laboratory** on perception for robots that inspect structures for hidden damage. I’m drawn to safety-critical autonomy — self-driving vehicles, inspection robotics, and manufacturing automation — where reliability is non-negotiable.
 
 ---
 
@@ -60,7 +60,7 @@ I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow, graduating 
 
 <p class="text-center" style="margin-top: -4px; margin-bottom: 1.2rem; opacity: 0.85;">
   <i class="fa-solid fa-circle-play" style="color: var(--global-theme-color);"></i>
-  <strong>Hover any card to play a short demo</strong> · click to dive in.
+  <strong>Hover any card to play a short demo</strong> · click for the full write-up.
 </p>
 
 <div class="projects">

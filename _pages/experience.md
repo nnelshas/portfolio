@@ -23,7 +23,7 @@ nav: false
         <li>Designed a <strong>nonlinear Kalman filter (EKF/UKF)</strong> that fuses several sensors into one real-time state estimate on a high-speed testbed — sub-millisecond updates, resilient when a sensor drops out.</li>
         <li>Designed a <strong>3-sensor array</strong> (piezoelectric, triboelectric, optical) that measures powder flow rate inside a metal 3D printer in real time, validated against a precision scale — <strong>5 patents pending</strong>.</li>
         <li>Trained a <strong>deep reinforcement learning (PPO) controller</strong> for the same high-delay system: <strong>3× lower tracking error</strong> than classical baselines, transferring from simulation to hardware with no retuning.</li>
-        <li>Run the Rapid Prototyping and Electronics Lab; <strong>trained 55 undergraduates</strong> and mentored 4 graduate researchers.</li>
+        <li>Manage the Rapid Prototyping and Electronics Lab; <strong>trained 55+ undergraduates</strong> and mentored 4 graduate researchers.</li>
       </ul>
       <div class="mt-2 flex-wrap">
         {% for tag in "MRAC,Lyapunov Adaptation,Kalman Filtering,Deep RL,Sensor Fusion,FPGA,LabVIEW,Python,C++,ROS2" | split: "," %}

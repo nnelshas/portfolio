@@ -21,7 +21,7 @@ category: research
 
 ## Overview
 
-A complete perception-and-control stack for **high-speed FPV drone racing** in the AI Grand Prix simulator. With no map of the course, the drone has to **spot** each gate, **work out where it is**, and **fly an aggressive path** through it — all in real time.
+A complete perception-and-control stack for **high-speed FPV drone racing** in the AI Grand Prix simulator. With no map of the course, the drone must **detect** each gate, **estimate its position**, and **fly an aggressive trajectory** through it — all in real time.
 
 The stack has three tightly coupled pieces:
 
