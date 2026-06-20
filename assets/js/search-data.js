@@ -41,7 +41,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-autonomous-fpv-drone-racing",
           title: 'Autonomous FPV Drone Racing',
-          description: "SO(3) geometric control, one-shot gate detection, and a Kalman filter for on-the-fly gate localization — a full autonomy stack for high-speed FPV drone racing.",
+          description: "SO(3) geometric control, one-shot gate detection, and an Extended Kalman Filter (EKF) for on-the-fly gate localization — a full autonomy stack for high-speed FPV drone racing.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/ai_grand_prix_drone_racing/";
             },},{id: "projects-community-stem-outreach",
@@ -54,11 +54,6 @@ ninja.data = [{
           description: "Deformable convolution that bends to follow curved surfaces — maps material thickness across a full part instead of point by point.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/deformable_convolution_nde/";
-            },},{id: "projects-kalman-filter-sensor-fusion-for-ded-mass-flow",
-          title: 'Kalman Filter Sensor Fusion for DED Mass Flow',
-          description: "A Kalman filter that fuses two different sensors to estimate metal-powder flow rate in real time during 3D printing — mean squared error 3.89×10⁻⁵ g/s.",
-          section: "Projects",handler: () => {
-              window.location.href = "/portfolio/projects/kalman_filtering_ded/";
             },},{id: "projects-automated-3d-point-cloud-registration",
           title: 'Automated 3D Point Cloud Registration',
           description: "An automated pipeline that precisely aligns multi-view LiDAR point clouds with no manual intervention — FPFH features → RANSAC → ICP refinement.",
@@ -69,14 +64,14 @@ ninja.data = [{
           description: "A Lyapunov-based MRAC controller that adapts to changing feeder dynamics and cancels periodic powder-flow surging — deployed on an FPGA with real stainless-steel powder.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/mrac_powder_flow_control/";
-            },},{id: "projects-multi-modal-powder-flow-sensors-for-metal-3d-printing",
-          title: 'Multi-Modal Powder-Flow Sensors for Metal 3D Printing',
-          description: "Three novel in-line sensors (piezoelectric, optical, triboelectric) benchmarked against ultrasonic baseline for DED powder flow — fused with a Kalman filter for real-time estimation.",
+            },},{id: "projects-multi-modal-powder-flow-sensors",
+          title: 'Multi-Modal Powder-Flow Sensors',
+          description: "Three novel in-line sensors (piezoelectric, optical, triboelectric) benchmarked against an ultrasonic baseline for metal-3D-printing powder flow — all hit R² &gt; 0.9 at a 90× lower data rate, then fused with a Kalman filter.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/multi_sensor_ded/";
             },},{id: "projects-vision-language-action-models",
           title: 'Vision-Language Action Models',
-          description: "Jacobian-guided adaptive action chunking for OpenVLA — trading off chunk length vs. accuracy to hit 99.2% success on LIBERO-SPATIAL while cutting inference calls by ~2×.",
+          description: "Confidence-guided dynamic action chunking for OpenVLA — a last-layer Jacobian L1-norm signal truncates unreliable actions, lifting LIBERO-SPATIAL success to 99.2%.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/vision_language_foundation_models/";
             },},{id: "teachings-data-science-fundamentals",
