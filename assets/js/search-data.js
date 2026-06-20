@@ -23,23 +23,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/portfolio/resume/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/portfolio/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/portfolio/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
-          description: "",
-          section: "News",},{id: "projects-autonomous-fpv-drone-racing",
+        },{id: "projects-autonomous-fpv-drone-racing",
           title: 'Autonomous FPV Drone Racing',
           description: "SO(3) geometric control, one-shot gate detection, and an Extended Kalman Filter (EKF) for on-the-fly gate localization — a full autonomy stack for high-speed FPV drone racing.",
           section: "Projects",handler: () => {
@@ -74,16 +58,6 @@ ninja.data = [{
           description: "Confidence-guided dynamic action chunking for OpenVLA — a last-layer Jacobian L1-norm signal truncates unreliable actions, lifting LIBERO-SPATIAL success to 99.2%.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/vision_language_foundation_models/";
-            },},{id: "teachings-data-science-fundamentals",
-          title: 'Data Science Fundamentals',
-          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
-          section: "Teachings",handler: () => {
-              window.location.href = "/portfolio/teachings/data-science-fundamentals/";
-            },},{id: "teachings-introduction-to-machine-learning",
-          title: 'Introduction to Machine Learning',
-          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
-          section: "Teachings",handler: () => {
-              window.location.href = "/portfolio/teachings/introduction-to-machine-learning/";
             },},{
         id: 'social-cv',
         title: 'CV',
