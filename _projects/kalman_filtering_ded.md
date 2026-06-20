@@ -4,7 +4,7 @@ title: Kalman Filter Sensor Fusion for DED Mass Flow
 description: A Kalman filter that fuses two different sensors to estimate metal-powder flow rate in real time during 3D printing — mean squared error 3.89×10⁻⁵ g/s.
 img: assets/img/proj_sensor_fusion.jpg
 importance: 5
-category: research
+category: archived
 ---
 
 <div class="row mb-4">

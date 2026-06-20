@@ -14,7 +14,6 @@ profile:
   more_info: >
     <p><i class="fa-solid fa-location-dot"></i> Atlanta, GA</p>
     <p><i class="fa-solid fa-envelope"></i> <a href="mailto:nshah@gatech.edu">nshah@gatech.edu</a></p>
-    <p><i class="fa-brands fa-github"></i> <a href="https://github.com/nnelshas" target="_blank">nnelshas</a></p>
     <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/neelshah8" target="_blank">neelshah8</a></p>
     <p><i class="fa-solid fa-file-pdf"></i> <a href="/portfolio/resume/">Resume</a></p>
 

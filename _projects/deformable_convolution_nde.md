@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Deformable Kernels for Curved-Surface NDE
-description: An inspection method whose filter bends to follow curved surfaces, mapping material thickness across the whole part instead of point by point.
+description: "<strong>Deformable convolution</strong> that bends to follow curved surfaces — maps material thickness across a full part instead of point by point."
 img: assets/img/proj_deformable.jpg
 hover_video: assets/video/deformable_nde_preview.mp4
 importance: 3

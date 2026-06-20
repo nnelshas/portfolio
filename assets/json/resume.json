@@ -149,12 +149,7 @@
       "name": "Robotics & ML",
       "level": "",
       "icon": "fa-solid fa-robot",
-      "keywords": [
-        "Sensor Fusion (Kalman, Bayesian)",
-        "State Estimation",
-        "VLM/VLA Foundation Models",
-        "Reinforcement Learning"
-      ]
+      "keywords": ["Sensor Fusion (Kalman, Bayesian)", "State Estimation", "VLM/VLA Foundation Models", "Reinforcement Learning"]
     },
     {
       "name": "Programming",
@@ -167,7 +162,6 @@
       "level": "",
       "icon": "fa-solid fa-microchip",
       "keywords": ["System Integration", "Real-time Controls", "High-speed Data Acquisition", "Mechatronics"]
-      ]
     }
   ],
   "languages": [],

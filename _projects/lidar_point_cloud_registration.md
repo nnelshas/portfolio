@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Automated 3D Point Cloud Registration
-description: An automated pipeline that aligns and merges many LiDAR scans into one 3-D model — no manual alignment (FPFH → RANSAC → ICP → pose-graph).
+description: An automated pipeline that precisely aligns multi-view <strong>LiDAR</strong> point clouds with no manual intervention — <strong>FPFH features</strong> → <strong>RANSAC</strong> → <strong>ICP</strong> refinement.
 img: assets/img/proj_pointcloud.jpg
 importance: 6
 category: research
@@ -35,7 +35,7 @@ category: research
         <div class="col-sm-1 d-flex align-items-center justify-content-center"><i class="fa-solid fa-arrow-right"></i></div>
         <div class="col-sm-2">
           <i class="fa-solid fa-cube fa-2x" style="color: var(--global-theme-color);"></i>
-          <p class="mt-2 small"><strong>Pose Graph → Merged Model</strong></p>
+          <p class="mt-2 small"><strong>Aligned Point Clouds</strong></p>
         </div>
       </div>
     </div>
@@ -57,12 +57,6 @@ category: research
 - **Point-to-plane ICP** refines the alignment to high precision
 - **Colored ICP** handles partial overlap and slight distortions
 - **Uses both shape and color** together
-
-### Global Consistency — Pose Graph
-
-- **Nodes** = scan positions, **edges** = pairwise alignments
-- **Global optimization** removes accumulated drift
-- **Loop closure** keeps the full reconstruction consistent
 
 ### Automation
 

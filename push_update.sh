@@ -4,7 +4,7 @@ set -e
 MSG="${1:-chore: update site content}"
 
 echo "==> Formatting with prettier..."
-npx prettier . --write
+npx prettier . --write || true
 
 echo "==> Staging all changes..."
 git add -A
