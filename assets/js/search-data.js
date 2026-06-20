@@ -51,27 +51,27 @@ ninja.data = [{
               window.location.href = "/portfolio/projects/community_stem_outreach/";
             },},{id: "projects-deformable-kernels-for-curved-surface-nde",
           title: 'Deformable Kernels for Curved-Surface NDE',
-          description: "Deformable-convolution wavenumber filtering that warps its kernel to local geometry for full-field thickness estimation on arbitrary curved surfaces.",
+          description: "An inspection method whose filter bends to follow curved surfaces, mapping material thickness across the whole part instead of point by point.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/deformable_convolution_nde/";
             },},{id: "projects-kalman-filter-sensor-fusion-for-ded-mass-flow",
           title: 'Kalman Filter Sensor Fusion for DED Mass Flow',
-          description: "Heterogeneous KF fusing piezoelectric and triboelectric sensors with gain-scheduled nonlinear calibration for real-time mass flow estimation in PB-DED — MSE 3.89×10⁻⁵ g/s.",
+          description: "A Kalman filter that fuses two different sensors to estimate metal-powder flow rate in real time during 3D printing — mean squared error 3.89×10⁻⁵ g/s.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/kalman_filtering_ded/";
             },},{id: "projects-automated-3d-point-cloud-registration",
           title: 'Automated 3D Point Cloud Registration',
-          description: "FPFH + RANSAC + ICP + pose graph pipeline for multi-scan LiDAR registration at LANL — fully automated, no manual alignment.",
+          description: "An automated pipeline that aligns and merges many LiDAR scans into one 3-D model — no manual alignment (FPFH → RANSAC → ICP → pose-graph).",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/lidar_point_cloud_registration/";
             },},{id: "projects-lyapunov-based-mrac-for-powder-flow",
           title: 'Lyapunov-Based MRAC for Powder Flow',
-          description: "Robust model reference adaptive control that suppresses rotary harmonic instabilities in directed-energy-deposition powder flow — validated on real experimental data.",
+          description: "A self-tuning adaptive controller that cancels the periodic surging in directed-energy-deposition powder flow — validated on real experimental data.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/mrac_powder_flow_control/";
             },},{id: "projects-vision-language-action-models",
           title: 'Vision-Language Action Models',
-          description: "Bayesian UQ + dynamic action allocation for OpenVLA-OFT — 99.2% success on LIBERO benchmark.",
+          description: "Bayesian uncertainty estimates and smart action reuse for the OpenVLA robot model — 99.2% success on the LIBERO benchmark.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/vision_language_foundation_models/";
             },},{id: "teachings-data-science-fundamentals",
