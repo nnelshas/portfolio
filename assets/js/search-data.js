@@ -38,6 +38,11 @@ ninja.data = [{
           description: "Deformable convolution that bends to follow curved surfaces — maps material thickness across a full part instead of point by point.",
           section: "Projects",handler: () => {
               window.location.href = "/portfolio/projects/deformable_convolution_nde/";
+            },},{id: "projects-detecting-jwst-mirror-misalignment",
+          title: 'Detecting JWST Mirror Misalignment',
+          description: "A two-head Swin Transformer reads a single James Webb point-spread function and says which of the 18 mirror segments drifted and by how much — F1 = 1.0 on localization and 0.14–10.1% error on piston/tip/tilt.",
+          section: "Projects",handler: () => {
+              window.location.href = "/portfolio/projects/jwst_swin_mirror_alignment/";
             },},{id: "projects-automated-3d-point-cloud-registration",
           title: 'Automated 3D Point Cloud Registration',
           description: "An automated pipeline that precisely aligns multi-view LiDAR point clouds with no manual intervention — FPFH features → RANSAC → ICP refinement.",
