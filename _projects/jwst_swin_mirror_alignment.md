@@ -64,7 +64,7 @@ The James Webb Space Telescope earns its resolution from the precise co-alignmen
 
 ## My Role
 
-This was a 3-person CS 7641 (Machine Learning) project. I owned the **data-generation pipeline** and the **supervised model** — the two-head Swin Transformer described below. (Teammates led the unsupervised clustering track, summarized at the end as context.)
+A CS 7641 (Machine Learning) project that I designed and built end to end — the **data-generation pipeline**, the **supervised two-head Swin Transformer** described below, and the **unsupervised clustering baseline** that motivated it.
 
 ---
 
@@ -115,9 +115,9 @@ One honest wrinkle: the model showed **asymmetric tip-vs-tilt error** despite th
 
 ---
 
-## Context: Why Supervision Was Necessary
+## Unsupervised Approach
 
-The unsupervised track (teammates' work) tried to recover segment identity _without_ labels — an autoencoder → PCA → K-means (k = 18) pipeline. It reconstructed PSFs accurately but its clusters never lined up with mirror panels (Adjusted Rand Index ≈ 0).
+Before committing to supervision, I tested whether segment identity could be recovered _without_ labels — an autoencoder → PCA → K-means (k = 18) pipeline. It reconstructed the PSFs accurately, but the clusters never lined up with the mirror segments (Adjusted Rand Index ≈ 0, i.e., no better than random grouping).
 
 <div class="row mb-4">
   <div class="col-sm-12">
@@ -128,7 +128,7 @@ The unsupervised track (teammates' work) tried to recover segment identity _with
   </div>
 </div>
 
-The takeaway: reconstruction-quality features are not the same as defect-discriminative features. **Explicit supervision** is what aligns the representation with the physics we actually care about — which is exactly what the two-head Swin model delivers.
+The takeaway: features that reconstruct an image well are not the same as features that reveal _which_ segment moved. **Explicit supervision** is what ties the model's representation to the physics that matters — exactly what the two-head Swin model delivers.
 
 ---
 
@@ -136,4 +136,4 @@ The takeaway: reconstruction-quality features are not the same as defect-discrim
 
 `PyTorch` · `Swin Transformer` · `STPSF (JWST PSF simulator)` · `Multi-Task Learning` · `Transfer Learning` · `scikit-learn (PCA, K-means, t-SNE)` · `NumPy`
 
-_CS 7641: Machine Learning — Georgia Tech, Spring 2026 (3-person project). My focus: the data-generation pipeline and the supervised two-head Swin Transformer (localization + magnitude regression)._
+_CS 7641: Machine Learning — Georgia Tech, Spring 2026. Designed and built end to end: the data-generation pipeline, the supervised two-head Swin Transformer (localization + magnitude regression), and the unsupervised clustering baseline._
