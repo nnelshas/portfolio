@@ -4,7 +4,7 @@ title: Deformable Kernels for Curved-Surface NDE
 description: "<strong>Deformable convolution</strong> that bends to follow curved surfaces — maps material thickness across a full part instead of point by point."
 img: assets/img/proj_deformable.jpg
 hover_video: assets/video/deformable_nde_preview.mp4
-importance: 3
+importance: 4
 category: research
 ---
 

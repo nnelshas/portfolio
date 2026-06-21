@@ -3,7 +3,7 @@ layout: page
 title: Automated 3D Point Cloud Registration
 description: An automated pipeline that precisely aligns multi-view <strong>LiDAR</strong> point clouds with no manual intervention — <strong>FPFH features</strong> → <strong>RANSAC</strong> → <strong>ICP</strong> refinement.
 img: assets/img/proj_pointcloud.jpg
-importance: 6
+importance: 7
 category: research
 ---
 

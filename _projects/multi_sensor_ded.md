@@ -3,7 +3,7 @@ layout: page
 title: Multi-Modal Powder-Flow Sensors
 description: "Three novel <strong>in-line sensors</strong> (piezoelectric, optical, triboelectric) benchmarked against an ultrasonic baseline for metal-3D-printing powder flow — all hit <strong>R² > 0.9</strong> at a <strong>90× lower data rate</strong>, then fused with a <strong>Kalman filter</strong>."
 img: assets/img/proj_multisensor_thumb.jpg
-importance: 5
+importance: 6
 category: research
 ---
 

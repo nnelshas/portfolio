@@ -4,7 +4,7 @@ title: Lyapunov-Based MRAC for Powder Flow
 description: A <strong>Lyapunov-based MRAC</strong> controller that adapts to changing feeder dynamics and cancels periodic powder-flow surging — deployed on an <strong>FPGA</strong> with real stainless-steel powder.
 img: assets/img/proj_mrac.jpg
 hover_video: assets/video/mrac_control_preview.mp4
-importance: 4
+importance: 5
 category: research
 ---
 
