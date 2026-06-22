@@ -92,6 +92,13 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/neelshah8", "_blank");
         },
       },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=Aj9EktEAAAAJ", "_blank");
+        },
+      },{
         id: 'social-rss',
         title: 'RSS Feed',
         section: 'Socials',
