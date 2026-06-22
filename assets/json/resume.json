@@ -32,7 +32,7 @@
       "endDate": "",
       "summary": "Research in real-time sensing, estimation, and control for highly dynamic systems.",
       "highlights": [
-        "Designed a nonlinear Kalman filter for real-time sensor fusion and state estimation.",
+        "Designed an Extended Kalman Filter (EKF) for real-time sensor fusion and state estimation.",
         "Deployed a deep RL agent for robust feed-forward control of nonlinear high-delay dynamics.",
         "Engineering a multimodal sensor array using Bayesian inference and ML-based fusion for signal processing.",
         "Managed the Rapid Prototyping and Electronics Lab; trained 55 undergraduates and mentored 4."

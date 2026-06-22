@@ -55,7 +55,7 @@ cv:
         end_date: Present
         highlights:
           - "**PhD Thesis**: *Multi-material Mass Flow Monitoring and Control for Powder-Blown Directed Energy Deposition* — developing real-time sensing and control systems for advanced metal additive manufacturing."
-          - "Designed and deployed a **nonlinear Kalman filter** for real-time multi-physics sensor fusion and state estimation on a high-speed physical testbed — sub-millisecond cycle times, robust to sensor dropout."
+          - "Designed and deployed an **Extended Kalman Filter (EKF)** for real-time multi-physics sensor fusion and state estimation on a high-speed physical testbed — sub-millisecond cycle times, robust to sensor dropout."
           - "Developed **MRAC with Lyapunov-stable parameter adaptation** for feedforward control of a nonlinear powder transport system with 10–60s delays; derived adaptation laws from Lyapunov stability theory; achieved **70% fluctuation mitigation** in preliminary implementation."
           - "Designed a **3-sensor array** (piezoelectric, triboelectric, optical) for real-time in-line powder mass flow monitoring — validated against precision mass scale, **5 patents pending**."
           - "Deployed a **Deep RL (PPO) agent** to achieve robust feed-forward control of a nonlinear high-delay system; achieved 3× reduction in tracking error vs. classical baselines with zero-shot sim-to-real transfer."

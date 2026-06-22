@@ -20,7 +20,7 @@ nav: false
       <p class="mb-2"><strong>Thesis:</strong> <em>Multi-material Mass Flow Monitoring and Control for Powder-Blown Directed Energy Deposition</em> &nbsp;·&nbsp; Advisor: Dr. Aaron Stebner</p>
       <ul>
         <li>Built a <strong>self-tuning adaptive controller</strong> (Lyapunov-based MRAC) for a nonlinear powder-transport system with 10–60s delays, deriving the math from first principles for guaranteed stability; a preliminary FPGA implementation <strong>cut flow fluctuations by 70%</strong>.</li>
-        <li>Designed a <strong>nonlinear Kalman filter (EKF/UKF)</strong> that fuses several sensors into one real-time state estimate on a high-speed testbed — sub-millisecond updates, resilient when a sensor drops out.</li>
+        <li>Designed an <strong>Extended Kalman Filter (EKF)</strong> that fuses several sensors into one real-time state estimate on a high-speed testbed — sub-millisecond updates, resilient when a sensor drops out.</li>
         <li>Designed a <strong>3-sensor array</strong> (piezoelectric, triboelectric, optical) that measures powder flow rate inside a metal 3D printer in real time, validated against a precision scale — <strong>6 patents pending</strong>.</li>
         <li>Trained a <strong>deep reinforcement learning (PPO) controller</strong> for the same high-delay system: <strong>3× lower tracking error</strong> than classical baselines, transferring from simulation to hardware with no retuning.</li>
         <li>Manage the Rapid Prototyping and Electronics Lab; <strong>trained 55+ undergraduates</strong> and mentored 4 graduate researchers.</li>
