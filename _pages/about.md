@@ -27,7 +27,7 @@ latest_posts:
   enabled: false
 ---
 
-I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow, graduating May 2027). I build **real-time sensing and control systems for noisy, fast-moving hardware**, combining control theory, physical sensors, and machine learning. My thesis unites all three to monitor and control metal 3D printing as it happens; in parallel, I work with **Los Alamos National Laboratory** on perception for robots that inspect structures for hidden damage. I’m drawn to safety-critical autonomy — self-driving vehicles, inspection robotics, and manufacturing automation — where reliability is non-negotiable.
+I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow, graduating May 2027). I build **real-time sensing and control systems on real hardware for noisy, non-linear systems**, combining control theory, physical sensors, and machine learning. My thesis unites all three to monitor and control metal 3D printing as it happens; in parallel, I work with **Los Alamos National Laboratory** on perception for robots that inspect structures for hidden damage. I’m drawn to safety-critical autonomy: self-driving vehicles, inspection robotics, and manufacturing automation.
 
 ---
 
@@ -37,13 +37,13 @@ I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow, graduating 
   <div class="col-sm-4">
     <div class="card p-3 h-100" style="border-top: 3px solid var(--global-theme-color);">
       <h6><strong><i class="fa-solid fa-wave-square"></i> Adaptive Control</strong></h6>
-      <p class="small mb-0">Controllers that <strong>tune themselves online</strong> to steer nonlinear systems with long delays — with stability proven mathematically (Lyapunov-based MRAC), not just tuned by hand.</p>
+      <p class="small mb-0">Controllers that <strong>tune themselves online</strong> to steer nonlinear systems with long delays, with stability proven mathematically (Lyapunov-based MRAC).</p>
     </div>
   </div>
   <div class="col-sm-4">
     <div class="card p-3 h-100" style="border-top: 3px solid var(--global-theme-color);">
       <h6><strong><i class="fa-solid fa-satellite-dish"></i> Multi-Physics Sensing</strong></h6>
-      <p class="small mb-0">Three custom sensors (piezoelectric, triboelectric, optical) whose readings are <strong>fused statistically</strong> into one reliable measurement that holds up under heavy noise.</p>
+      <p class="small mb-0">Three custom sensors (piezoelectric, triboelectric, optical) whose readings are <strong>fused</strong> into one reliable measurement, even under heavy noise.</p>
     </div>
   </div>
   <div class="col-sm-4">
