@@ -71,3 +71,44 @@ I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow, graduating 
     {% endfor %}
   </div>
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Neel Shah",
+  "url": "https://nnelshas.github.io/portfolio/",
+  "image": "https://nnelshas.github.io/portfolio/assets/img/meLinked.jpg",
+  "jobTitle": "Robotics PhD Candidate",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Georgia Institute of Technology",
+    "sameAs": "https://www.gatech.edu/"
+  },
+  "worksFor": {
+    "@type": "CollegeOrUniversity",
+    "name": "Georgia Institute of Technology"
+  },
+  "email": "mailto:nshah@gatech.edu",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Atlanta",
+    "addressRegion": "GA",
+    "addressCountry": "US"
+  },
+  "award": "NSF Graduate Research Fellowship (GRFP)",
+  "knowsAbout": [
+    "Robotics",
+    "Sensor Fusion",
+    "State Estimation",
+    "Adaptive Control",
+    "Reinforcement Learning",
+    "Autonomous Systems",
+    "Perception"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/neelshah8",
+    "https://github.com/nnelshas"
+  ]
+}
+</script>
