@@ -108,7 +108,8 @@ I’m a **Robotics PhD candidate at Georgia Tech** (NSF-GRFP Fellow, graduating 
   ],
   "sameAs": [
     "https://www.linkedin.com/in/neelshah8",
-    "https://github.com/nnelshas"
+    "https://github.com/nnelshas",
+    "https://scholar.google.com/citations?user=Aj9EktEAAAAJ"
   ]
 }
 </script>
