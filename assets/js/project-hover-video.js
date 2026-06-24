@@ -3,11 +3,12 @@
  * - .project-card  → plays .project-card-video on mouseenter
  * - .pub-preview-wrapper → plays .pub-preview-video on mouseenter
  *
- * The poster/thumbnail stays visible until the video actually begins
- * playing (the `playing` event), at which point an `is-playing` class is
- * added so CSS can crossfade the poster out and the video in. This avoids
- * the "black flash" you'd otherwise see while an uncached video is still
- * buffering after the poster has already faded away.
+ * The videos use preload="auto" so they start downloading on page load and
+ * every hover plays instantly. The poster/thumbnail stays visible until a
+ * real frame is available, then an `is-playing` class crossfades the poster
+ * out and the video in — so a still-buffering video never flashes black, and
+ * (unlike a pure `playing`-event gate) a video that buffers slowly the first
+ * time still reveals reliably.
  */
 (function () {
   "use strict";
@@ -16,21 +17,29 @@
     var video = container.querySelector(videoSelector);
     if (!video) return;
 
-    // Reveal the video only once frames are actually rendering.
-    video.addEventListener("playing", function () {
-      container.classList.add("is-playing");
-    });
+    var hovered = false;
+
+    // Only reveal while the pointer is actually over the card — otherwise the
+    // load-time `loadeddata`/`canplay` events would unhide every video at once.
+    function revealIfHovered() {
+      if (hovered) container.classList.add("is-playing");
+    }
+
+    // Any of these means at least one frame is ready to show.
+    video.addEventListener("playing", revealIfHovered);
+    video.addEventListener("loadeddata", revealIfHovered);
+    video.addEventListener("canplay", revealIfHovered);
 
     container.addEventListener("mouseenter", function () {
-      // Kick off the network fetch immediately so playback starts ASAP on
-      // an uncached load.
-      if (video.preload === "none") video.load();
-      video.currentTime = 0;
+      hovered = true;
       var p = video.play();
       if (p !== undefined) p.catch(function () {});
+      // Already buffered (the common case with preload="auto") → reveal now.
+      if (video.readyState >= 2) revealIfHovered();
     });
 
     container.addEventListener("mouseleave", function () {
+      hovered = false;
       container.classList.remove("is-playing");
       video.pause();
       video.currentTime = 0;
