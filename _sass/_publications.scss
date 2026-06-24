@@ -228,7 +228,8 @@
     pointer-events: none;
   }
 
-  &:hover {
+  &:hover,
+  &.is-playing {
     .pub-preview-img {
       opacity: 0;
     }
