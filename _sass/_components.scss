@@ -239,6 +239,11 @@ ul.task-list input[type="checkbox"] {
     object-fit: cover;
     margin: 0;
     pointer-events: none;
+    // Start hidden and fade in only once the video is actually playing
+    // (the JS adds .is-playing on the `playing` event). This crossfades
+    // with the poster instead of cutting to a black, still-buffering frame.
+    opacity: 0;
+    transition: opacity 400ms ease;
   }
 
   // "Hover to play" hint — visible by default so viewers know the card is
@@ -269,14 +274,24 @@ ul.task-list input[type="checkbox"] {
 
 .project-card:hover {
   .project-media-wrapper {
-    // Reveal the playing video by fading the poster that sits over it.
+    .project-video-badge {
+      opacity: 1;
+      background: var(--global-theme-color);
+    }
+  }
+}
+
+// Crossfade poster → video only once the video is actually rendering frames
+// (the JS toggles .is-playing). Until then the poster stays put, so a slow,
+// uncached hover never reveals a black buffering frame.
+.project-card.is-playing {
+  .project-media-wrapper {
     .project-poster {
       opacity: 0;
     }
 
-    .project-video-badge {
+    .project-card-video {
       opacity: 1;
-      background: var(--global-theme-color);
     }
   }
 }
